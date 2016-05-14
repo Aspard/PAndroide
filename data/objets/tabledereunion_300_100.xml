@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<racine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="./obj.xsd" >
+        
+   <objet>
+       <nom>TableDeReunion 300x100</nom>
+       <coordonnees>0;0,0;1.0</coordonnees>  
+       <coordonnees>0;1.0,3.0;1.0</coordonnees>
+       <coordonnees>3.0;1.0,3.0;0</coordonnees>
+       <coordonnees>3.0;0,0;0</coordonnees>
+   </objet>
+</racine>
+            

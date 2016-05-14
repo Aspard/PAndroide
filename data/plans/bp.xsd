@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Element racine -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <!-- declaration des elements -->
+    <xsd:element name="coordonnees" type="xsd:string"/>
+    <xsd:element name="coordEtNomPieceConnexe" type="xsd:string"/>
+    <xsd:element name="batiment" type="batimentType"/>
+    <xsd:element name="murs" type="mursType"/>
+    <xsd:element name="obstacles" type="obstaclesType"/>
+    <xsd:element name="obstacle" type="obstacleType"/>
+    <xsd:element name="piece" type="pieceType"/>
+    <xsd:element name="sortie" type="sortieType"/>
+
+    <!-- murs -->
+    <xsd:complexType name="mursType">
+        <xsd:sequence>
+            <xsd:element ref="coordonnees" maxOccurs ="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+    <!-- obstacle -->
+    <xsd:complexType name="obstacleType">
+        <xsd:sequence>
+            <xsd:element ref="coordonnees" maxOccurs ="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- obstacles -->
+    <xsd:complexType name="obstaclesType">
+        <xsd:sequence>
+            <xsd:element name="nom" type="xsd:string"/>
+            <xsd:element ref="obstacle" maxOccurs ="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- sorties -->
+    <xsd:complexType name="sortieType">
+        <xsd:sequence>
+            <xsd:element ref="coordEtNomPieceConnexe" maxOccurs ="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- piece -->
+    <xsd:complexType name="pieceType">
+        <!-- nom de la piece -->
+        <xsd:all>
+            <xsd:element name="nom" type="xsd:string"/>
+            <xsd:element ref="murs"/>
+            <xsd:element ref="obstacles" minOccurs="0"/>
+            <xsd:element ref="sortie"/>
+        </xsd:all>
+    </xsd:complexType>
+
+    <!-- Batiment -->
+    <xsd:complexType name="batimentType">
+            <!-- nom du batiment -->
+            <!-- Liste des pieces -->
+            <xsd:sequence id="test">
+                <xsd:element name="nom" type="xsd:string"/>
+                <xsd:element ref="piece" minOccurs="1" maxOccurs="unbounded"/>
+            </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- Racine -->
+    <xsd:element name="racine">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="batiment"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>

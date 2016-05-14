@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Element racine -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <!-- declaration des elements -->
+    <xsd:element name="coordonnees" type="xsd:string"/>
+    <xsd:element name="objet" type="objetType"/>
+
+    <!-- Objet -->
+    <xsd:complexType name="objetType">
+            <!-- nom de l'objet -->
+            <!-- Liste des segments -->
+            <xsd:sequence id="test">
+                <xsd:element name="nom" type="xsd:string"/>
+                <xsd:element ref="coordonnees" minOccurs="1" maxOccurs="unbounded"/>
+            </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- Racine -->
+    <xsd:element name="racine">
+        <xsd:complexType>
+            <xsd:element ref="objet"/>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>

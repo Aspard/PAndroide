@@ -1,0 +1,1122 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Outils &mdash; documentation PAndroide a2</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="documentation PAndroide a2" href="index.html"/>
+        <link rel="prev" title="Interface" href="interface.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PAndroide
+          
+
+          
+            
+            <img src="_static/mainpetitalpha.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="code.html">Documents du projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="algo.html">Algorithmes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interface.html">Interface</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Outils</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-outils.affiche">affiche</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-outils.lectureFichier">lectureFichier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-outils.lectureXML">lectureXML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-outils.priodict">priodict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">outils</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">PAndroide</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Outils</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/outils.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-outils">
+<span id="outils"></span><h1>Outils<a class="headerlink" href="#module-outils" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Module de gestion des fonctions outils.
+La classe priodict utilisée a été implementée par David Eppstein de l&#8217;UC Irvine.</p>
+<p>La fonction de test d&#8217;appartenance d&#8217;un point à un polygone a été faite par Joel Lawhead.</p>
+<p>Elle est disponible ici : <a class="reference external" href="http://geospatialpython.com/2011/08/point-in-polygon-2-on-line.html">http://geospatialpython.com/2011/08/point-in-polygon-2-on-line.html</a></p>
+<div class="section" id="module-outils.affiche">
+<span id="affiche"></span><h2>affiche<a class="headerlink" href="#module-outils.affiche" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="function">
+<dt id="outils.affiche.afficher">
+<code class="descclassname">outils.affiche.</code><code class="descname">afficher</code><span class="sig-paren">(</span><em>formes</em>, <em>formeDefs</em>, <em>line</em>, <em>lineDef</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.affiche.afficher" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="outils.affiche.afficherForme">
+<code class="descclassname">outils.affiche.</code><code class="descname">afficherForme</code><span class="sig-paren">(</span><em>formes</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.affiche.afficherForme" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-outils.lectureFichier">
+<span id="lecturefichier"></span><h2>lectureFichier<a class="headerlink" href="#module-outils.lectureFichier" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="function">
+<dt id="outils.lectureFichier.lecturePieceObs">
+<code class="descclassname">outils.lectureFichier.</code><code class="descname">lecturePieceObs</code><span class="sig-paren">(</span><em>nomFichier</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.lectureFichier.lecturePieceObs" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Lit un fichier de pièce et retourne les points de départ et d&#8217;arrivée, les murs de la pièce et la liste des obstacles</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><strong>nomFichier</strong> (<em>string</em>) &#8211; Nom du fichier de la pièce</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body">[int,int],[int,int],numpy.array,list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-outils.lectureXML">
+<span id="lecturexml"></span><h2>lectureXML<a class="headerlink" href="#module-outils.lectureXML" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="module-outils.priodict">
+<span id="priodict"></span><h2>priodict<a class="headerlink" href="#module-outils.priodict" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="class">
+<dt id="outils.priodict.priorityDictionary">
+<em class="property">class </em><code class="descclassname">outils.priodict.</code><code class="descname">priorityDictionary</code><a class="headerlink" href="#outils.priodict.priorityDictionary" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Initialize priorityDictionary by creating binary heap of pairs (value,key).
+Note that changing or removing a dict entry will not remove the old pair from the heap until it is found by smallest() or until the heap is rebuilt.</p>
+<dl class="method">
+<dt id="outils.priodict.priorityDictionary.setdefault">
+<code class="descname">setdefault</code><span class="sig-paren">(</span><em>key</em>, <em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.priodict.priorityDictionary.setdefault" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Reimplement setdefault to pass through our customized __setitem__.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="outils.priodict.priorityDictionary.smallest">
+<code class="descname">smallest</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#outils.priodict.priorityDictionary.smallest" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Find smallest item after removing deleted items from front of heap.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="id1">
+<h2>outils<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
+<span class="target" id="module-outils.outils"></span><dl class="function">
+<dt id="outils.outils.agrandiradd">
+<code class="descclassname">outils.outils.</code><code class="descname">agrandiradd</code><span class="sig-paren">(</span><em>forme</em>, <em>seuil</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.agrandiradd" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Agrandit l&#8217;obstacle (pour obstacles de murs)</p>
+<p>Retourne le nouvel obstacle</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>forme</strong> (<em>numpy.array</em>) &#8211; Forme à agrandir</li>
+<li><strong>seuil</strong> (<em>float</em>) &#8211; Distance à respecter</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.agrandirobs">
+<code class="descclassname">outils.outils.</code><code class="descname">agrandirobs</code><span class="sig-paren">(</span><em>forme</em>, <em>seuil</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.agrandirobs" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Agrandit l&#8217;obstacle (pour obstacles hors des murs)</p>
+<p>Retourne le nouvel obstacle</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>forme</strong> (<em>numpy.array</em>) &#8211; Forme à agrandir</li>
+<li><strong>seuil</strong> (<em>float</em>) &#8211; Distance à respecter</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.ameliore">
+<code class="descclassname">outils.outils.</code><code class="descname">ameliore</code><span class="sig-paren">(</span><em>l</em>, <em>i</em>, <em>nb</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.ameliore" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Améliorer une ligne entre deux de ses points, le i et i+1ème, en ajoutant nb points entre eux.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>l</strong> (<em>np.array</em>) &#8211; liste de points</li>
+<li><strong>i</strong> (<em>int</em>) &#8211; position du premier point</li>
+<li><strong>nb</strong> (<em>int</em>) &#8211; nombre de points à rajouter</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.angleCommun">
+<code class="descclassname">outils.outils.</code><code class="descname">angleCommun</code><span class="sig-paren">(</span><em>pt1</em>, <em>pt2</em>, <em>angles</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.angleCommun" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Détermine l&#8217;angle commun entre deux points, 0 s&#8217;il n&#8217;y en a pas</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>pt1</strong> (<em>[int,int]</em>) &#8211; Premier point</li>
+<li><strong>pt2</strong> (<em>[int,int]</em>) &#8211; Deuxième point</li>
+<li><strong>angles</strong> (<em>list</em>) &#8211; Liste des angles</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">[int,int] ou int</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.bloque">
+<code class="descclassname">outils.outils.</code><code class="descname">bloque</code><span class="sig-paren">(</span><em>courbe</em>, <em>obss</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.bloque" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Vérifie si une ligne est bloquée par un ensemble d&#8217;obstacles</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>courbe</strong> (<em>numpy.array</em>) &#8211; Ligne</li>
+<li><strong>obss</strong> (<em>list</em>) &#8211; Liste des obstacles potentiels</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">boolean</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.decoupobs">
+<code class="descclassname">outils.outils.</code><code class="descname">decoupobs</code><span class="sig-paren">(</span><em>x0</em>, <em>y0</em>, <em>obs</em>, <em>car</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.decoupobs" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Se chargerait de découper un obstacle en &#8220;zones&#8221; dans l&#8217;optique de déformer successivement des formes complexes en fonction de la position courante.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>x0</strong> (<em>float</em>) &#8211; coordonnée  en x</li>
+<li><strong>y0</strong> (<em>float</em>) &#8211; coordonnée  en y</li>
+<li><strong>obs</strong> (<em>numpy.array</em>) &#8211; forme</li>
+<li><strong>car</strong> (<em>list</em>) &#8211; coordonnée s du carré englobant la forme</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">numpy.array, list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.dedanspts">
+<code class="descclassname">outils.outils.</code><code class="descname">dedanspts</code><span class="sig-paren">(</span><em>obs</em>, <em>forme</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.dedanspts" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Retourne la liste des points d&#8217;une première forme qui sont inclus dans une autre</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>obs</strong> (<em>numpy.array</em>) &#8211; Première forme</li>
+<li><strong>forme</strong> (<em>numpy.array</em>) &#8211; Deuxièmre forme</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.defomin">
+<code class="descclassname">outils.outils.</code><code class="descname">defomin</code><span class="sig-paren">(</span><em>ligne</em>, <em>obs</em>, <em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.defomin" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Réduit la taille de l&#8217;obstacle jusqu&#8217;à ce que la ligne n&#8217;y passe plus</p>
+<p>Retourne le nouvel obstacle</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>ligne</strong> (<em>numpy.array</em>) &#8211; Chemin à ne plus bloquer</li>
+<li><strong>obs</strong> (<em>numpy.array</em>) &#8211; Obstacle</li>
+<li><strong>point</strong> (<em>[int,int]</em>) &#8211; Point vers lequel les points de l&#8217;obstacle seront envoyés</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.deformerPourc">
+<code class="descclassname">outils.outils.</code><code class="descname">deformerPourc</code><span class="sig-paren">(</span><em>forme</em>, <em>point</em>, <em>pourcentage</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.deformerPourc" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Réduit une forme selon un pourcentage</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>forme</strong> (<em>numpy.array</em>) &#8211; Forme à réduire</li>
+<li><strong>point</strong> (<em>[int,int]</em>) &#8211; Centre de la forme réduite</li>
+<li><strong>pourcentage</strong> (<em>float</em>) &#8211; Pourcentage de réduction</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.dehors">
+<code class="descclassname">outils.outils.</code><code class="descname">dehors</code><span class="sig-paren">(</span><em>obs</em>, <em>forme</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.dehors" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Vérifie si une première forme a au moins un point qui n&#8217;est pas inclus dans une autre</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>obs</strong> (<em>numpy.array</em>) &#8211; Première forme</li>
+<li><strong>forme</strong> (<em>numpy.array</em>) &#8211; Deuxièmre forme</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">boolean</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.dehorspts">
+<code class="descclassname">outils.outils.</code><code class="descname">dehorspts</code><span class="sig-paren">(</span><em>obs</em>, <em>forme</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.dehorspts" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Retourne la liste des points d&#8217;une première forme qui ne sont pas inclus dans une autre</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>obs</strong> (<em>numpy.array</em>) &#8211; Première forme</li>
+<li><strong>forme</strong> (<em>numpy.array</em>) &#8211; Deuxièmre forme</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.distMin">
+<code class="descclassname">outils.outils.</code><code class="descname">distMin</code><span class="sig-paren">(</span><em>ligne</em>, <em>obs</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.distMin" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Retourne la distance minimale entre les points de deux formes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>ligne</strong> (<em>numpy.array</em>) &#8211; Première forme</li>
+<li><strong>obs</strong> (<em>numpy.array</em>) &#8211; Deuxième forme</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.distMin_point">
+<code class="descclassname">outils.outils.</code><code class="descname">distMin_point</code><span class="sig-paren">(</span><em>ligne</em>, <em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.distMin_point" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Retourne les distance d&#8217;un point aux points d&#8217;une ligne</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>ligne</strong> (<em>numpy.array</em>) &#8211; Forme</li>
+<li><strong>point</strong> (<em>[int,int]</em>) &#8211; Point</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.estDansCarre">
+<code class="descclassname">outils.outils.</code><code class="descname">estDansCarre</code><span class="sig-paren">(</span><em>x0</em>, <em>y0</em>, <em>car</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.estDansCarre" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Indique si un point de coordonnées x0, y0 se trouve dans le carré car.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>x0</strong> (<em>float</em>) &#8211; coordonnée en x</li>
+<li><strong>y0</strong> (<em>float</em>) &#8211; coordonnée en y</li>
+<li><strong>car</strong> (<em>np.array</em>) &#8211; coordonnées du carré testé</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">boolean</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.fusion">
+<code class="descclassname">outils.outils.</code><code class="descname">fusion</code><span class="sig-paren">(</span><em>obstacles</em>, <em>seuil</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.fusion" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Fusionne les obstacles trop proches selon le seuil</p>
+<p>Retourne la nouvelle liste des obstacles</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>obstacles</strong> (<em>list</em>) &#8211; Liste des obstacles à fusionner</li>
+<li><strong>seuil</strong> (<em>float</em>) &#8211; Distance à respecter</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.fusionAgr">
+<code class="descclassname">outils.outils.</code><code class="descname">fusionAgr</code><span class="sig-paren">(</span><em>obstacles</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.fusionAgr" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Fusionne les obstacles agrandis</p>
+<p>Retourne la nouvelle liste des obstacles</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>obstacles</strong> (<em>list</em>) &#8211; Liste des obstacles à fusionner</li>
+<li><strong>seuil</strong> (<em>float</em>) &#8211; Distance à respecter</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.fusionMur">
+<code class="descclassname">outils.outils.</code><code class="descname">fusionMur</code><span class="sig-paren">(</span><em>piece</em>, <em>obstacles</em>, <em>seuil</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.fusionMur" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Fusionne les obstacles trop proches des murs de la piece selon le seuil</p>
+<p>Retourne les nouveaux murs et les nouveaux obstacles</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>piece</strong> (<em>numpy.array</em>) &#8211; Murs de la piece</li>
+<li><strong>obstacles</strong> (<em>list</em>) &#8211; Liste des obstacles à fusionner</li>
+<li><strong>seuil</strong> (<em>float</em>) &#8211; Distance à respecter</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">list,list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.genCible">
+<code class="descclassname">outils.outils.</code><code class="descname">genCible</code><span class="sig-paren">(</span><em>ligne</em>, <em>forme</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.genCible" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Génère la cible de déformation d&#8217;une forme, déterminée par rapport à la ligne, et la retourne</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>ligne</strong> (<em>numpy.array</em>) &#8211; Ligne à ne plus bloquer</li>
+<li><strong>forme</strong> (<em>numpy.array</em>) &#8211; Obstacle à déformer</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.genLigne">
+<code class="descclassname">outils.outils.</code><code class="descname">genLigne</code><span class="sig-paren">(</span><em>pt1</em>, <em>pt2</em>, <em>nbPoints</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.genLigne" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Retourne une ligne droite formée d&#8217;autant de points que demandé</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>pt1</strong> (<em>[int,int]</em>) &#8211; Premier point</li>
+<li><strong>nbPoints</strong> (<em>int</em>) &#8211; Nombre de points de la ligne</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.generationgraph">
+<code class="descclassname">outils.outils.</code><code class="descname">generationgraph</code><span class="sig-paren">(</span><em>xdeb</em>, <em>ydeb</em>, <em>piecedeb</em>, <em>xfin</em>, <em>yfin</em>, <em>piecefin</em>, <em>resorigin</em>, <em>nomorigin</em>, <em>dico</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.generationgraph" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Permet de générer un graphe qui servira à determiner l&#8217;ordre des pièces à traverser.
+Les portes serviront de noeuds, leurs identifiants étant composés du nom des deux pièces qu&#8217;ils relient.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>xdeb</strong> (<em>float</em>) &#8211; coordonnée en x dans la pièce du début</li>
+<li><strong>ydeb</strong> (<em>float</em>) &#8211; coordonnée en y dans la pièce du début</li>
+<li><strong>piecedeb</strong> (<em>str</em>) &#8211; Nom de la pièce de départ</li>
+<li><strong>xfin</strong> (<em>float</em>) &#8211; coordonnée en x dans la pièce de fin</li>
+<li><strong>yfin</strong> (<em>float</em>) &#8211; coordonnée en x dans la pièce de fin</li>
+<li><strong>piecefin</strong> (<em>str</em>) &#8211; Nom de la pièce visée</li>
+<li><strong>resorigin</strong> (<em>list()</em>) &#8211; Tableau contenant coordonnée d&#8217;un des points de chaque piece</li>
+<li><strong>nomorigin</strong> (<em>list()</em>) &#8211; Tableau contenant le nom des pièces</li>
+<li><strong>dico</strong> (<em>dict()</em>) &#8211; dictionnaire contenant, pour chaque piece, les coordonnées des portes menant aux pièces connexes.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">dict()</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.genpltobs">
+<code class="descclassname">outils.outils.</code><code class="descname">genpltobs</code><span class="sig-paren">(</span><em>x0</em>, <em>y0</em>, <em>piece</em>, <em>tabConnexe</em>, <em>listepieces</em>, <em>listebatiments</em>, <em>tabverif</em>, <em>resdata</em>, <em>resobs</em>, <em>piecePrecedente</em>, <em>resorigin</em>, <em>nomorigin</em>, <em>dico</em>, <em>premieriter=0</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.genpltobs" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Fonction récursive permettant de remplir un dictionnaire comprenant les descriptifs des différentes pièces, leurs positions dans l&#8217;espace, les objets qui les composent, les pièces qui sont voisines ainsi que la position des portes les reliant. Initialement tabverif, resdata, resobs, piecePrecedente, resorigin, nomorigin et dico sont vides.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>x0</strong> (<em>float</em>) &#8211; coordonnée en x de l&#8217;origine de la première pièce</li>
+<li><strong>x0</strong> &#8211; coordonnée en y de l&#8217;origine de la première pièce</li>
+<li><strong>piece</strong> &#8211; nom de la première piece</li>
+<li><strong>tabConnexe</strong> (<em>list</em>) &#8211; liste de connexité entre pieces</li>
+<li><strong>tabverif</strong> (<em>list</em>) &#8211; liste permettant de verifier si une piece à déjà été traitée</li>
+<li><strong>resdata</strong> (<em>list</em>) &#8211; Liste comprenant le descriptif du bâtiment</li>
+<li><strong>piecePrecedente</strong> (<em>str</em>) &#8211; Nom de la pièce traitée précedemment</li>
+<li><strong>resorigin</strong> (<em>list</em>) &#8211; Liste contenant les origines de chaque pieces</li>
+<li><strong>nomorigin</strong> (<em>list</em>) &#8211; Liste contenant les nom de chaque pièces</li>
+<li><strong>dico</strong> (<em>dict</em>) &#8211; dictionnaire comprenant les descriptifs des différentes pièces, leurs positions dans l&#8217;espace, les objets qui les composent, les pièces qui sont voisines ainsi que la position des portes les reliant.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">list, list, list, list , dict, float, float, float, float, dict</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.gentabconnexe">
+<code class="descclassname">outils.outils.</code><code class="descname">gentabconnexe</code><span class="sig-paren">(</span><em>listeNomPiece</em>, <em>listeBatiments</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.gentabconnexe" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Permet, pour chaque piece, de récupérer l&#8217;ensemble de pièces qui lui sont connexes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>listeNomPiece</strong> (<em>list</em>) &#8211; Liste comprenant le nom des pièces</li>
+<li><strong>listeBatiments</strong> (<em>list</em>) &#8211; Liste comprenant le descriptif du bâtiment</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.ignorerPoints">
+<code class="descclassname">outils.outils.</code><code class="descname">ignorerPoints</code><span class="sig-paren">(</span><em>ligne</em>, <em>seuil</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.ignorerPoints" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Retire les points d&#8217;une ligne à une certaine distance du début ou de la fin de celle-ci</p>
+<p>Retourne le nouveau tableau des points obtenus</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>ligne</strong> (<em>numpy.array</em>) &#8211; Ligne à raccourcir</li>
+<li><strong>seuil</strong> (<em>float</em>) &#8211; Distance</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.inddistMin">
+<code class="descclassname">outils.outils.</code><code class="descname">inddistMin</code><span class="sig-paren">(</span><em>ligne</em>, <em>obs</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.inddistMin" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Retourne la distance minimale entre les points de deux formes et les deux points les plus proches</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>ligne</strong> (<em>numpy.array</em>) &#8211; Première forme</li>
+<li><strong>obs</strong> (<em>numpy.array</em>) &#8211; Deuxième forme</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">float,int,int</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.inside">
+<code class="descclassname">outils.outils.</code><code class="descname">inside</code><span class="sig-paren">(</span><em>point</em>, <em>poly</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.inside" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Rend vrai si un point est inscrit dans un polygone, faux sinon</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>point</strong> (<em>[int,int]</em>) &#8211; Point à tester</li>
+<li><strong>poly</strong> (<em>list([int,int])</em>) &#8211; Polygone</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">boolean</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.minptsdedans">
+<code class="descclassname">outils.outils.</code><code class="descname">minptsdedans</code><span class="sig-paren">(</span><em>carres</em>, <em>forme</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.minptsdedans" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Retourne la liste des indices d&#8217;une liste de carres ayant le minimum de points dans une forme</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first last simple">
+<li><strong>carres</strong> (<em>list</em>) &#8211; Liste des carres</li>
+<li><strong>forme</strong> (<em>numpy.array</em>) &#8211; Forme</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.obsbloquants">
+<code class="descclassname">outils.outils.</code><code class="descname">obsbloquants</code><span class="sig-paren">(</span><em>courbe</em>, <em>obss</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.obsbloquants" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Retourne la liste des obstacles sur le chemin</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>courbe</strong> (<em>numpy.array</em>) &#8211; Chemin</li>
+<li><strong>obss</strong> (<em>list</em>) &#8211; Liste des obstacles</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">boolean,list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.pointLePlusProche">
+<code class="descclassname">outils.outils.</code><code class="descname">pointLePlusProche</code><span class="sig-paren">(</span><em>forme</em>, <em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.pointLePlusProche" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Retourne le point d&#8217;une forme le plus proche d&#8217;un autre point</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>forme</strong> (<em>numpy.array</em>) &#8211; Forme</li>
+<li><strong>point</strong> (<em>[int,int]</em>) &#8211; Point</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">[int,int]</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.pointsdehors">
+<code class="descclassname">outils.outils.</code><code class="descname">pointsdehors</code><span class="sig-paren">(</span><em>obstacles</em>, <em>piece</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.pointsdehors" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Retourne la liste des points situés en dehors de la pièce
+Utilisé pour déterminer les points autour desquels les réductions des obstacles seront faites, et pour s&#8217;assurer que le chemin ne sorte pas de la pièce</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>obstacles</strong> (<em>list</em>) &#8211; Liste des obstacles</li>
+<li><strong>piece</strong> (<em>numpy.array</em>) &#8211; Murs de la piece</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.ptsdehorsrect">
+<code class="descclassname">outils.outils.</code><code class="descname">ptsdehorsrect</code><span class="sig-paren">(</span><em>obs</em>, <em>rect</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.ptsdehorsrect" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Retourne la liste des points d&#8217;une forme qui sont en dehors d&#8217;un rectangle</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>obs</strong> (<em>numpy.array</em>) &#8211; Première forme</li>
+<li><strong>rect</strong> (<em>numpy.array</em>) &#8211; Deuxièmre forme</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.ramenerRect">
+<code class="descclassname">outils.outils.</code><code class="descname">ramenerRect</code><span class="sig-paren">(</span><em>murs</em>, <em>ext</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.ramenerRect" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Identifie les murs pouvant être des obstacles au sein de la pièce</p>
+<p>Retourne les coins du rectangle entourant la pièce, les obstacles en dépassant et les points de déformation pour ces obstacles</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>murs</strong> (<em>numpy.array</em>) &#8211; Murs de la pièce</li>
+<li><strong>ext</strong> (<em>int</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">numpy.array,list,list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.ramenerRectAgr">
+<code class="descclassname">outils.outils.</code><code class="descname">ramenerRectAgr</code><span class="sig-paren">(</span><em>murs</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.ramenerRectAgr" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Dégage les obstacles de la pièce</p>
+<p>Retourne les coins du rectangle entourant la pièce, la liste des obstacles dégagés et des points de déformation pour ces obstacles</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><strong>murs</strong> (<em>numpy.array</em>) &#8211; Murs de la pièce</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body">numpy.array,list,list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.recupCote">
+<code class="descclassname">outils.outils.</code><code class="descname">recupCote</code><span class="sig-paren">(</span><em>ligne</em>, <em>cote</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.recupCote" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Retourne le point du rectangle le plus eloigne de la ligne</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>ligne</strong> (<em>numpy.array</em>) &#8211; Forme</li>
+<li><strong>cote</strong> (<em>numpy.array</em>) &#8211; Rectangle</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">[int,int]</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.redefineForme">
+<code class="descclassname">outils.outils.</code><code class="descname">redefineForme</code><span class="sig-paren">(</span><em>forme</em>, <em>facteur</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.redefineForme" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Rajoute des points à une forme</p>
+<p>Retourne la nouvelle forme obtenue</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>forme</strong> (<em>numpy.array</em>) &#8211; Forme</li>
+<li><strong>facteur</strong> &#8211; Nombre de points à ajouter entre chaque point de la forme</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.redefineforme">
+<code class="descclassname">outils.outils.</code><code class="descname">redefineforme</code><span class="sig-paren">(</span><em>forme</em>, <em>nbpoints</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.redefineforme" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Rajoute des points à une forme</p>
+<p>Retourne la nouvelle forme obtenue</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>forme</strong> (<em>numpy.array</em>) &#8211; Forme</li>
+<li><strong>nbpoints</strong> (<em>int</em>) &#8211; Nombre de points à ajouter entre chaque point de la forme</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.redefineseuil">
+<code class="descclassname">outils.outils.</code><code class="descname">redefineseuil</code><span class="sig-paren">(</span><em>forme</em>, <em>seuil</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.redefineseuil" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Rajoute des points à une forme de manière à ce qu&#8217;ils respectent une certaine distance</p>
+<p>Retourne la nouvelle forme obtenue</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>forme</strong> (<em>numpy.array</em>) &#8211; Forme</li>
+<li><strong>seuil</strong> &#8211; Distance à respecter entre chaque point</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.rotforme">
+<code class="descclassname">outils.outils.</code><code class="descname">rotforme</code><span class="sig-paren">(</span><em>forme</em>, <em>alpha</em>, <em>tabpos</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.rotforme" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Calcule les nouvelles coordonnées d&#8217;un objet après une rotation d&#8217;angle alpha depuis tabpos.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>forme</strong> (<em>list</em>) &#8211; tableau des points de la forme</li>
+<li><strong>alpha</strong> (<em>float</em>) &#8211; angle pour la rotation</li>
+<li><strong>tabpos</strong> (<em>list</em>) &#8211; coordonnées du centre de rotation</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.rotxy">
+<code class="descclassname">outils.outils.</code><code class="descname">rotxy</code><span class="sig-paren">(</span><em>point</em>, <em>centre</em>, <em>alpha</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.rotxy" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Calcule la nouvelle position d&#8217;un point depuis une rotation alpha depuis le point centre.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>point</strong> (<em>list</em>) &#8211; coordonnées d&#8217;un points</li>
+<li><strong>centre</strong> (<em>list</em>) &#8211; coordonnées du centre de rotation</li>
+<li><strong>alpha</strong> (<em>float</em>) &#8211; angle pour la rotation</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">list</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="outils.outils.trouverCote">
+<code class="descclassname">outils.outils.</code><code class="descname">trouverCote</code><span class="sig-paren">(</span><em>obs</em><span class="sig-paren">)</span><a class="headerlink" href="#outils.outils.trouverCote" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Retourne le rectangle entourant une forme</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><strong>obs</strong> (<em>numpy.array</em>) &#8211; Forme</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body">numpy.array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="interface.html" class="btn btn-neutral" title="Interface" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Gaspard Ducamp &amp; Yoann Taillé.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'a2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

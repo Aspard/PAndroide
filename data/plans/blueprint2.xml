@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<racine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="./bp.xsd" >
+  
+  <batiment>
+    <nom>Test</nom>
+    
+    <piece>
+        <nom>Bureau de Yoann</nom>
+        <murs>
+            <coordonnees>4;2,4;0</coordonnees>  
+            <coordonnees>4;0,0;0</coordonnees>
+            <coordonnees>0;0,0;6</coordonnees>
+            <coordonnees>0;6,4;6</coordonnees>
+            <coordonnees>4;6,4;4</coordonnees>             
+        </murs>
+        <sortie>
+            <coordEtNomPieceConnexe>4;3,Couloir</coordEtNomPieceConnexe>
+        </sortie>
+    </piece>
+    
+    <piece>
+        <nom>Salle a brainstorm</nom>
+        <murs>
+            <coordonnees>5;4,5;0</coordonnees>  
+            <coordonnees>5;0,0;0</coordonnees>
+            <coordonnees>0;0,0;7</coordonnees>
+            <coordonnees>0;7,5;7</coordonnees>
+            <coordonnees>5;7,5;6</coordonnees>             
+        </murs>
+        <obstacles>
+            <obstacle>
+                <nom>tablereunion</nom>
+                <coordonnees>2;2,2;5</coordonnees>  
+                <coordonnees>2;5,3;5</coordonnees>
+                <coordonnees>3;5,3;2</coordonnees>
+                <coordonnees>3;2,2;2</coordonnees>
+            </obstacle>      
+        </obstacles>
+        <sortie>
+            <coordEtNomPieceConnexe>5;5,Bureau du chef</coordEtNomPieceConnexe>
+        </sortie>
+    </piece>
+    
+    <piece>
+        <nom>Bureau du chef</nom>
+        <murs>
+            <coordonnees>0;3,0;0</coordonnees>  
+            <coordonnees>0;0,7;0</coordonnees>
+            <coordonnees>7;0,7;3</coordonnees>
+            <coordonnees>7;3,5;3</coordonnees>
+            <coordonnees>5;3,5;4</coordonnees>
+            <coordonnees>5;6,3;6</coordonnees>
+            <coordonnees>1;6,0;6</coordonnees>      
+            <coordonnees>0;6,0;5</coordonnees>        
+        </murs>
+        <obstacles>
+            <obstacle>
+                <nom>bar</nom>
+                <coordonnees>3;0,3;1</coordonnees>  
+                <coordonnees>3;1,7;1</coordonnees>
+                <coordonnees>7;1,7;0</coordonnees>
+                <coordonnees>7;0,3;0</coordonnees>
+            </obstacle>      
+        </obstacles>
+        <sortie>
+            <coordEtNomPieceConnexe>0;4,Salle a brainstorm</coordEtNomPieceConnexe>
+            <coordEtNomPieceConnexe>5;5,Cagibi</coordEtNomPieceConnexe>
+            <coordEtNomPieceConnexe>2;6,Compta</coordEtNomPieceConnexe>
+        </sortie>
+    </piece>
+
+    <piece>
+        <nom>Compta</nom>
+        <murs>
+            <coordonnees>1;0,0;0</coordonnees>
+            <coordonnees>0;0,0;1</coordonnees>
+            <coordonnees>0;3,0;4</coordonnees>
+            <coordonnees>0;4,9;4</coordonnees>
+            <coordonnees>9;4,9;1</coordonnees>
+            <coordonnees>9;1,5;1</coordonnees>
+            <coordonnees>5;1,5;0</coordonnees>
+            <coordonnees>5;0,3;0</coordonnees>
+        </murs>
+        <obstacles>
+            <obstacle>
+                <nom>comptoir</nom>
+                <coordonnees>2;4,2;2</coordonnees>
+                <coordonnees>2;2,3;2</coordonnees>
+                <coordonnees>3;2,3;3</coordonnees>
+                <coordonnees>3;3,7;3</coordonnees>
+                <coordonnees>7;3,7;4</coordonnees>
+                <coordonnees>7;4,2;4</coordonnees>
+            </obstacle>
+        </obstacles>
+        <sortie>
+            <coordEtNomPieceConnexe>2;0,Bureau du chef</coordEtNomPieceConnexe>
+            <coordEtNomPieceConnexe>0;2,Couloir</coordEtNomPieceConnexe>
+        </sortie>
+    </piece>
+
+    <piece>
+        <nom>Cagibi</nom>
+        <murs>
+            <coordonnees>0;1,0;0</coordonnees>   
+            <coordonnees>0;0,4;0</coordonnees> 
+            <coordonnees>4;0,4;3</coordonnees>
+            <coordonnees>4;3,0;3</coordonnees>
+        </murs>
+        <sortie>
+            <coordEtNomPieceConnexe>0;2,Bureau du chef</coordEtNomPieceConnexe>
+        </sortie>
+    </piece>
+    
+    <piece>
+        <nom>Couloir</nom>
+        <murs>            
+            <coordonnees>0;0,0;4</coordonnees>
+            <coordonnees>0;4,1;4</coordonnees>
+            <coordonnees>3;4,4;4</coordonnees>
+            <coordonnees>4;4,4;7</coordonnees>
+            <coordonnees>4;9,4;11</coordonnees>
+            <coordonnees>4;11,6;11</coordonnees>
+            <coordonnees>6;11,6;8</coordonnees>
+            <coordonnees>6;6,6;4</coordonnees>
+            <coordonnees>8;4,10;4</coordonnees>
+            <coordonnees>12;4,15;4</coordonnees>
+            <coordonnees>15;4,15;3</coordonnees>
+            <coordonnees>15;1,15;0</coordonnees>
+            <coordonnees>15;0,6;0</coordonnees>
+            <coordonnees>6;0,6;-2</coordonnees>
+            <coordonnees>6;-4,6;-6</coordonnees>
+            <coordonnees>4;-6,4;-4</coordonnees>
+            <coordonnees>4;-2,4;0</coordonnees>
+            <coordonnees>4;0,0;0</coordonnees>           
+        </murs>
+        <sortie>
+            <coordEtNomPieceConnexe>15;2,Compta</coordEtNomPieceConnexe>
+            <coordEtNomPieceConnexe>6;-3,Bureau de Helene</coordEtNomPieceConnexe>
+            <coordEtNomPieceConnexe>4;-3,Bureau de Yoann</coordEtNomPieceConnexe>
+            <coordEtNomPieceConnexe>2;4,Bureau de Yacine</coordEtNomPieceConnexe>
+            <coordEtNomPieceConnexe>4;8,Bureau de Yacine</coordEtNomPieceConnexe>
+            <coordEtNomPieceConnexe>6;7,Salle de detente</coordEtNomPieceConnexe>
+            <coordEtNomPieceConnexe>7;4,Salle de detente</coordEtNomPieceConnexe>
+            <coordEtNomPieceConnexe>11;4,Salle de detente</coordEtNomPieceConnexe>
+            <coordEtNomPieceConnexe>5;-6,Anneau pour jogging</coordEtNomPieceConnexe>
+        </sortie>
+    </piece>
+    
+    <piece>
+        <nom>Bureau de Helene</nom>
+        <murs>
+            <coordonnees>0;2,0;0</coordonnees>  
+            <coordonnees>0;0,4;0</coordonnees>
+            <coordonnees>4;0,4;6</coordonnees>
+            <coordonnees>4;6,0;6</coordonnees>
+            <coordonnees>0;6,0;4</coordonnees>             
+        </murs>
+        <obstacles>
+            <obstacle>
+                <nom>but</nom>
+                <coordonnees>2;0,2;1</coordonnees>  
+                <coordonnees>2;1,3;1</coordonnees>
+                <coordonnees>3;1,3;5</coordonnees>
+                <coordonnees>3;5,2;5</coordonnees>
+                <coordonnees>2;5,2;6</coordonnees>  
+                <coordonnees>2;6,4;6</coordonnees>
+                <coordonnees>4;6,4;0</coordonnees>
+                <coordonnees>4;0,2;0</coordonnees>
+            </obstacle>
+            <obstacle>
+                <nom>chaise</nom>
+                <coordonnees>0;1,0.6;1</coordonnees>  
+                <coordonnees>0.6;1,0.6;1.6</coordonnees>
+                <coordonnees>0.6;1.6,0;1.6</coordonnees>
+                <coordonnees>0;1.6,0;1</coordonnees>
+            </obstacle>      
+        </obstacles>
+        <sortie>
+            <coordEtNomPieceConnexe>0;3,Couloir</coordEtNomPieceConnexe>
+        </sortie>
+    </piece>
+    
+    <piece>
+        <nom>Bureau de Yacine</nom>
+        <murs>
+            <coordonnees>1;0,0;0</coordonnees>  
+            <coordonnees>0;0,0;7</coordonnees>
+            <coordonnees>0;7,4;7</coordonnees>
+            <coordonnees>4;7,4;5</coordonnees>
+            <coordonnees>4;3,4;0</coordonnees>
+            <coordonnees>4;0,3;0</coordonnees>             
+        </murs>
+        <sortie>
+            <coordEtNomPieceConnexe>2;0,Couloir</coordEtNomPieceConnexe>
+            <coordEtNomPieceConnexe>4;4,Couloir</coordEtNomPieceConnexe>
+        </sortie>
+    </piece>
+    
+    <piece>
+        <nom>Salle de detente</nom>
+        <murs>
+            <coordonnees>2;0,4;0</coordonnees>  
+            <coordonnees>6;0,6;2</coordonnees>
+            <coordonnees>6;4,6;7</coordonnees> 
+            <coordonnees>6;7,0;7</coordonnees> 
+            <coordonnees>0;7,0;4</coordonnees> 
+            <coordonnees>0;2,0;0</coordonnees>
+        </murs>
+        <sortie>
+            <coordEtNomPieceConnexe>0;3,Couloir</coordEtNomPieceConnexe>
+            <coordEtNomPieceConnexe>1;0,Couloir</coordEtNomPieceConnexe>
+            <coordEtNomPieceConnexe>5;0,Couloir</coordEtNomPieceConnexe>
+            <coordEtNomPieceConnexe>6;3,jardin</coordEtNomPieceConnexe>
+        </sortie>
+    </piece>
+    
+    <piece>
+        <nom>Anneau pour jogging</nom>
+        <murs>
+            <coordonnees>0;0,10;0</coordonnees>
+            <coordonnees>10;0,10;-1</coordonnees>    
+            <coordonnees>10;-1,19;-1</coordonnees>
+            <coordonnees>19;-1,19;0</coordonnees>
+            <coordonnees>19;0,34;0</coordonnees>
+            <coordonnees>34;0,34;21</coordonnees>   
+            <coordonnees>34;21,0;21</coordonnees>  
+            <coordonnees>0;21,0;0</coordonnees>
+        </murs>
+        <obstacles>
+            <obstacle>
+                <nom>mur interieur</nom>
+                <coordonnees>2;2,12;2</coordonnees>    
+                <coordonnees>12;2,12;1</coordonnees>
+                <coordonnees>12;1,17;1</coordonnees>
+                <coordonnees>17;1,17;2</coordonnees>
+                <coordonnees>17;2,32;2</coordonnees>   
+                <coordonnees>32;2,32;19</coordonnees>  
+                <coordonnees>32;19,2;19</coordonnees>
+                <coordonnees>2;19,2;2</coordonnees>
+            </obstacle>
+        </obstacles>
+        <sortie>
+            <coordEtNomPieceConnexe>7;2,Couloir</coordEtNomPieceConnexe>
+        </sortie>
+    </piece>
+    
+    <piece>
+        <nom>jardin</nom>
+        <murs>
+            <coordonnees>0;0,12;0</coordonnees>
+            <coordonnees>12;0,12;-3</coordonnees>    
+            <coordonnees>12;-3,8;-3</coordonnees>
+            <coordonnees>8;-3,8;-4</coordonnees>
+            <coordonnees>8;-4,12;-4</coordonnees>
+            <coordonnees>12;-4,12;-7</coordonnees>   
+            <coordonnees>12;-7,10;-7</coordonnees>  
+            <coordonnees>10;-7,10;-10</coordonnees>
+            <coordonnees>10;-10,18;-10</coordonnees>
+            <coordonnees>18;-10,18;7</coordonnees>
+            <coordonnees>18;7,0;7</coordonnees>   
+            <coordonnees>0;7,0;4</coordonnees>  
+            <coordonnees>0;2,0;0</coordonnees>  
+        </murs>
+        <sortie>
+            <coordEtNomPieceConnexe>0;3,Salle de detente</coordEtNomPieceConnexe>
+        <sortie>
+    </piece>
+        
+  </batiment>
+</racine>
