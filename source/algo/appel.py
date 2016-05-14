@@ -14,8 +14,8 @@ from copy import deepcopy as cp
 
 def calculerLigneBloque(ligne,formes,pointsdefo):
     """
+    Fonction utilisée pour calculer le chemin à emprunter.
 
-    Fonction utilisée pour calculer le chemin à emprunter
     Tant que la ligne passe par un obstacle, on définit une cible de déformation pour l'obstacle et on applique l'algorithme de déformation
 
     Si l'on effectue trop de déformations pour une forme (limite à 10 par défaut), on arrête. Pour faire varier cette limite, modifier la ligne 57
@@ -105,13 +105,13 @@ def calculerLigneBloque(ligne,formes,pointsdefo):
 
 def appelPieceBloque(nomfichier,seuil):
     """
-
     Lit un fichier de piece, fusionne les obstacles et calcule le chemin à emprunter
 
     Il est possible de faire varier le nombre de points:
-    - De la pièce: ligne 129 du fichier( par défaut: piece = tools.redefineForme(piece,50) )
-    - Des obstacles: ligne 131 du fichier( par défaut: obss = [tools.redefineForme(obs,20) for obs in obstacles] )
-    - Du chemin: ligne 134 du fichier( par défaut: ligne = tools.genLigne(entree,sortie,400))
+
+    * De la pièce: ligne 129 du fichier( par défaut: piece = tools.redefineForme(piece,50) )
+    * Des obstacles: ligne 131 du fichier( par défaut: obss = [tools.redefineForme(obs,20) for obs in obstacles] )
+    * Du chemin: ligne 134 du fichier( par défaut: ligne = tools.genLigne(entree,sortie,400))
 
     Retourne les points du chemin calculé à partir du fichier
 
@@ -176,8 +176,8 @@ def appelPieceBloque(nomfichier,seuil):
 
 def calculerLigneAgr(ligne,formes,pointsdefo,seuil):
     """
+    Fonction utilisée pour calculer le chemin à emprunter grâce à des obstacles agrandis.
 
-    Fonction utilisée pour calculer le chemin à emprunter grâce à des obstacles agrandis
     Tant que la ligne passe par un obstacle agrandi, on définit une cible de déformation pour l'obstacle et on applique l'algoritheme de déformation
 
     Si l'on effectue trop de déformations pour une forme (limite à 5 par défaut), on arrête. Pour faire varier cette limite, modifier la ligne 208
@@ -237,11 +237,11 @@ def calculerLigneAgr(ligne,formes,pointsdefo,seuil):
 
 def appelAgr(nomfichier,seuil,mode=0):
     """
-
     Lit un fichier de pièce, agrandit les obstacles, fusionne les obstacles agrandis, puis détermine le chemin à emprunter
 
     Il est possible de faire varier le nombre de points:
-    - Du chemin: ligne 257 du fichier( par défaut: ligne = tools.genLigne(entree,sortie,200))
+
+    * Du chemin: ligne 257 du fichier( par défaut: ligne = tools.genLigne(entree,sortie,200))
 
     Retourne les points du chemin calculé à partir du fichier
 
@@ -276,14 +276,7 @@ def appelAgr(nomfichier,seuil,mode=0):
     pointsdefo =  tools.pointsdehors(formes,rect)
 
     l = calculerLigneAgr(ligne,formes,pointsdefo,seuil)
-    cpt = 1
-    if mode == 1:
-        for val in l:
-            if cpt == 7:
-                cpt = 1
-			#img = mpimg.imread('../../data/img/mv/mv'+str(cpt)+'.png')
-            #img = plt.imshow(img,zorder=10, extent=[val[0],val[0]+0.6,val[1], val[1]+0.6])
-            cpt+=1
+
     return l
   
 

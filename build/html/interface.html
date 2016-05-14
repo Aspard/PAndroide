@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Interface &mdash; documentation PAndroide a2</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="documentation PAndroide a2" href="index.html"/>
+        <link rel="next" title="Outils" href="outils.html"/>
+        <link rel="prev" title="Algorithmes" href="algo.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PAndroide
+          
+
+          
+            
+            <img src="_static/mainpetitalpha2.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="code.html">Documents du projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="algo.html">Algorithmes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-interface.interface">inteface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="outils.html">Outils</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">PAndroide</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Interface</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/interface.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-interface">
+<span id="interface"></span><h1>Interface<a class="headerlink" href="#module-interface" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Module de gestion de l&#8217;interface graphique.</p>
+<div class="section" id="module-interface.interface">
+<span id="inteface"></span><h2>inteface<a class="headerlink" href="#module-interface.interface" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="function">
+<dt id="interface.interface.affichageavecobstacles">
+<code class="descclassname">interface.interface.</code><code class="descname">affichageavecobstacles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.affichageavecobstacles" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Permet d&#8217;afficher, notamment à l&#8217;aide de mathplotlib et de la fonction outils.genpltobs, notre plan.</p>
+<p>L&#8217;affichage des obstacles et des noms des pièces dépendra des variables valoff et valabs.</p>
+<p>Débloque les boutons d&#8217;ajout d&#8217;objets, de suppression d&#8217;objets et de calcul de chemin.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="interface.interface.affichageavecpcc">
+<code class="descclassname">interface.interface.</code><code class="descname">affichageavecpcc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.affichageavecpcc" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Est utilisée après un appel à compute(). Lance l&#8217;algorithme via algo.appelAgr() ou algo.appelPieceBloque() en fonction de la valeur du seuil.</p>
+<p>Gère l&#8217;affichage des différentes courbes de résultat. Celle du résultat de l&#8217;appel à dij.shortestPath() est paramétrable depuis le fichier conf.py situé dans le répertoire &#8216;source/interface&#8217;.</p>
+<p>Sauvegarde les points de la courbe de résultat dans un fichier situé dans &#8220;data/res&#8221; (son nom sera composé de la date d&#8217;éxecution, du plan choisi ansi que du seuil).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="interface.interface.affichageobstacles">
+<code class="descclassname">interface.interface.</code><code class="descname">affichageobstacles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.affichageobstacles" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Gère l&#8217;affichage des obstacles des pièces.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="interface.interface.affichernompieces">
+<code class="descclassname">interface.interface.</code><code class="descname">affichernompieces</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.affichernompieces" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Gère l&#8217;affichage des noms des pièces.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="interface.interface.annulation">
+<code class="descclassname">interface.interface.</code><code class="descname">annulation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.annulation" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Réactive les boutons de chargement et de suppresion d&#8217;objets, annule l&#8217;ajout d&#8217;un objet.</p>
+<p>Appel à modifaff afin de nettoyer le plan.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="interface.interface.cccv">
+<code class="descclassname">interface.interface.</code><code class="descname">cccv</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.cccv" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Permet de positionner à nouveau un objet.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="interface.interface.chargement">
+<code class="descclassname">interface.interface.</code><code class="descname">chargement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.chargement" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Permet de charger un plan, de créer une nouvelle fenêtre ainsi qu&#8217;un certain nombre de variable globale servant à la récupération de valeurs.</p>
+<p>Des variables definissent ses caractéristiques (taille, taille minimale, couleur de fond).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="interface.interface.chargementobjet">
+<code class="descclassname">interface.interface.</code><code class="descname">chargementobjet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.chargementobjet" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Permet de charger un objet depuis le répertoire &#8220;data/objets&#8221;.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="interface.interface.compute">
+<code class="descclassname">interface.interface.</code><code class="descname">compute</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.compute" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Permet de calculer, depuis les valeurs présentes dans les champs, le plus court chemin entre le départ et l&#8217;arrivée.</p>
+<p>Fait appel à outils.generationgraph() pour générer un graphe puis à dij.shortestPath() pour calculer par où nous devrons passer pour atteindre l&#8217;objectif.</p>
+<p>Se termine par un appel à affichageavecpcc()</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="interface.interface.genfenetre">
+<code class="descclassname">interface.interface.</code><code class="descname">genfenetre</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.genfenetre" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Permet de créer la fenêtre d&#8217;accueil.</p>
+<p>Des variables globales definissent ses caractéristiques (taille, taille minimale, couleur de fond).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="interface.interface.modifaff">
+<code class="descclassname">interface.interface.</code><code class="descname">modifaff</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.modifaff" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Permet de réafficher le plan sans devoir regénerer la fenêtre.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="interface.interface.onclick">
+<code class="descclassname">interface.interface.</code><code class="descname">onclick</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.onclick" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Gère les clics sur le plan de l&#8217;utilisateur en fonction des différents modes (suppression d&#8217;objets, chargement d&#8217;objets, remplissage des champs).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="interface.interface.placementobjet">
+<code class="descclassname">interface.interface.</code><code class="descname">placementobjet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.placementobjet" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Permet de placer un objet sur la carte, bloque les boutons &#8220;Charger un objet&#8221;.</p>
+<p>Desactive les boutons de chargement et de suppression d&#8217;objet.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="interface.interface.reposition">
+<code class="descclassname">interface.interface.</code><code class="descname">reposition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.reposition" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Permet de replacer un objet sur le plan.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="interface.interface.sauvegarde">
+<code class="descclassname">interface.interface.</code><code class="descname">sauvegarde</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.sauvegarde" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Lance la sauvegarde du plan courant.</p>
+<p>Celle-ci sera effectuée par la fonction outils.lectureXML.sauvegardeXML().</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="interface.interface.selectionpiecearr">
+<code class="descclassname">interface.interface.</code><code class="descname">selectionpiecearr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.selectionpiecearr" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Permet d&#8217;attribuer à valuepiecedest, nom de la pièce d&#8217;arrivée, la valeur choisie.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="interface.interface.selectionpiecedep">
+<code class="descclassname">interface.interface.</code><code class="descname">selectionpiecedep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.selectionpiecedep" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Permet d&#8217;attribuer à valuepiece, nom de la pièce de départ, la valeur choisie.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="interface.interface.suppression">
+<code class="descclassname">interface.interface.</code><code class="descname">suppression</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.suppression" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Permet la suppression d&#8217;un objet via un clic gauche.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="interface.interface.traitementPiece">
+<code class="descclassname">interface.interface.</code><code class="descname">traitementPiece</code><span class="sig-paren">(</span><em>tab</em><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.traitementPiece" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Est utilisée pour l&#8217;affichage d&#8217;Arnold sur la courbe. Un point sera ajouté à un tableau tous les 10 centimètres.</p>
+<p>Ce dernier servira pour ancrer les sprites sur le plan.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><strong>tab</strong> (<em>list</em>) &#8211; liste des points de la ligne calculée après les déformations</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body">list</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="interface.interface.validationposition">
+<code class="descclassname">interface.interface.</code><code class="descname">validationposition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#interface.interface.validationposition" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Réactive les boutons de chargement et de suppresion d&#8217;objets, rajoute l&#8217;objet dans le dictionnaire des obstacles.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="outils.html" class="btn btn-neutral float-right" title="Outils" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="algo.html" class="btn btn-neutral" title="Algorithmes" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Gaspard Ducamp &amp; Yoann Taillé.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'a2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

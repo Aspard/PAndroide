@@ -60,7 +60,8 @@ avecSeuil = 0
 def genfenetre():
     """
     Permet de créer la fenêtre d'accueil.
-    Des variables globales definissent ses caractéristiques (taille, taille minimale, couleur de fond)
+    
+    Des variables globales definissent ses caractéristiques (taille, taille minimale, couleur de fond).
     """
     global l2, l, fenetre, b0
     
@@ -127,10 +128,7 @@ def placementobjet():
     """
     Permet de placer un objet sur la carte, bloque les boutons "Charger un objet".
 
-    Args:
-    Kwargs:
-    Returns:
-    Raises:
+    Desactive les boutons de chargement et de suppression d'objet.
     """
     global top, b3, b5, valclick, pieceobjtmp, listboxobj
     valclick = 2
@@ -142,6 +140,9 @@ def placementobjet():
 
 def chargement():
     """
+    Permet de charger un plan, de créer une nouvelle fenêtre ainsi qu'un certain nombre de variable globale servant à la récupération de valeurs.
+
+    Des variables definissent ses caractéristiques (taille, taille minimale, couleur de fond).
     """
 
     global filepath, listeNomBat, listebatiments, b1, b2, b3, b4, b5, b6, fenetre, menubar, l, l2, b0, entreex, entreey, entreepiece, entreexdest, entreeydest, entreepiecedest, valuex, valuey, valuexdest, valueydest, valuepiece, valuepiecedest, dejaOuvert, valaff, valobs,pieceaparcourir,dicobstacles,listobjets,pf,tabverif, valueseuil, entreeseuil
@@ -331,6 +332,7 @@ def chargement():
 
 def affichernompieces():
     """
+    Gère l'affichage des noms des pièces.
     """
     global valaff
     
@@ -341,6 +343,7 @@ def affichernompieces():
        
 def affichageobstacles():
     """
+    Gère l'affichage des obstacles des pièces.
     """
     global valobs
         
@@ -351,6 +354,11 @@ def affichageobstacles():
        
 def compute():
     """
+    Permet de calculer, depuis les valeurs présentes dans les champs, le plus court chemin entre le départ et l'arrivée.
+
+    Fait appel à outils.generationgraph() pour générer un graphe puis à dij.shortestPath() pour calculer par où nous devrons passer pour atteindre l'objectif.
+
+    Se termine par un appel à affichageavecpcc()
     """
 
     global piecesaparcourir, x0,y0,xdest,ydest,res, piecedeb, piecefin
@@ -394,6 +402,11 @@ def compute():
 
 def affichageavecobstacles():
     """
+    Permet d'afficher, notamment à l'aide de mathplotlib et de la fonction outils.genpltobs, notre plan.
+
+    L'affichage des obstacles et des noms des pièces dépendra des variables valoff et valabs.
+
+    Débloque les boutons d'ajout d'objets, de suppression d'objets et de calcul de chemin.
     """
 
     global tabverif, l2, l, valaff,valobs, datorigin, nomorigin,dico, b5, b3, b6, canvas, f, ax, dicobstacles, pf, dat,xmin,xmax,ymin,ymax
@@ -501,6 +514,7 @@ def affichageavecobstacles():
     
 def modifaff():
     """
+    Permet de réafficher le plan sans devoir regénerer la fenêtre. 
     """
 
     global tabverif, l2, l, valaff,valobs, datorigin, nomorigin,dico, b5, b3, b6, ax, dicobstacles, dat
@@ -579,6 +593,7 @@ def modifaff():
     
 def selectionpiecedep():
     """
+    Permet d'attribuer à valuepiece, nom de la pièce de départ, la valeur choisie.
     """
     global valuepiece, valuepiecedest, top
     valuepiece.set(nomorigin[listbox.curselection()[0]])
@@ -586,6 +601,7 @@ def selectionpiecedep():
     
 def selectionpiecearr():
     """
+    Permet d'attribuer à valuepiecedest, nom de la pièce d'arrivée, la valeur choisie.
     """
     global valuepiece, valuepiecedest, top
     valuepiecedest.set(nomorigin[listbox2.curselection()[0]])
@@ -593,6 +609,7 @@ def selectionpiecearr():
     
 def validationposition():
     """
+    Réactive les boutons de chargement et de suppresion d'objets, rajoute l'objet dans le dictionnaire des obstacles.
     """
     global valclick, b3, b5, top, listeobjets, pieceobjtmp, dicobstacles
     valclick = 1
@@ -607,6 +624,9 @@ def validationposition():
     
 def annulation():
     """
+    Réactive les boutons de chargement et de suppresion d'objets, annule l'ajout d'un objet. 
+
+    Appel à modifaff afin de nettoyer le plan.
     """
     global valclick, b3, b5
     b3.configure(state='normal')
@@ -617,6 +637,7 @@ def annulation():
     
 def reposition():
     """
+    Permet de replacer un objet sur le plan.
     """
     global top, canvas, f, f2, ax
     top.destroy()
@@ -624,6 +645,7 @@ def reposition():
     
 def suppression():
     """
+    Permet la suppression d'un objet via un clic gauche.
     """
     global b6, valclick
     b6.configure(state='normal')
@@ -631,6 +653,7 @@ def suppression():
     
 def cccv():
     """
+    Permet de positionner à nouveau un objet.
     """
     global valclick, b3, b5, top, listeobjets, pieceobjtmp, dicobstacles
     valclick = 2
@@ -643,6 +666,7 @@ def cccv():
     
 def onclick(event):
     """
+    Gère les clics sur le plan de l'utilisateur en fonction des différents modes (suppression d'objets, chargement d'objets, remplissage des champs).
     """
     global valclick, x0,y0,xdest,ydest, entreey, entreex, entreeydest, entreexdest, valuex, valuey, valuexdest, valueydest, top, listbox, listbox2, b3, b5, canvas, datatmp, linetmp,dicobstacles, rot
     
@@ -799,16 +823,21 @@ def onclick(event):
 
 def affichageavecpcc():
     """
+
+    Est utilisée après un appel à compute(). Lance l'algorithme via algo.appelAgr() ou algo.appelPieceBloque() en fonction de la valeur du seuil.
+
+    Gère l'affichage des différentes courbes de résultat. Celle du résultat de l'appel à dij.shortestPath() est paramétrable depuis le fichier conf.py situé dans le répertoire 'source/interface'.
+
+    Sauvegarde les points de la courbe de résultat dans un fichier situé dans "data/res" (son nom sera composé de la date d'éxecution, du plan choisi ansi que du seuil).
     """
 
     global tabverif, l2, l, valaff,valobs, datorigin, nomorigin,dico,piecesaparcourir,x0,y0,xdest,ydest,res, canvas, f, f2,listpieces,avecSeuil, ax
     
-    listepieces = listebatiments[0][0]
+    #listepieces = listebatiments[0][0]
 
-    tabverif = np.zeros(len(listepieces))
+    #tabverif = np.zeros(len(listepieces))
 
-    dat, datobs, datorigin, nomorigin, dico,xmax,xmin,ymax,ymin, nul = outils.genpltobs(0, 0, listebatiments[0][1][0], outils.gentabconnexe(listepieces, listebatiments),
-                                   listepieces, listebatiments, tabverif, [], [], 'null',[],[],dict())
+    #dat, datobs, datorigin, nomorigin, dico,xmax,xmin,ymax,ymin, nul = outils.genpltobs(0, 0, listebatiments[0][1][0], outils.gentabconnexe(listepieces, listebatiments),listepieces, listebatiments, tabverif, [], [], 'null',[],[],dict())
     
     outils.dicoobstacles.clear()
                                    
@@ -817,8 +846,8 @@ def affichageavecpcc():
     if conf.affichageplus == 1:
         img = mpimg.imread('../../data/img/cafe.png')
         img2 = mpimg.imread('../../data/img/criterium.png')
-    	ax.imshow(img2,zorder=10, extent=[xmax-15, xmax+5, ymax-11, ymax+9])
-    	plt.imshow(img, zorder=0, extent=[xmin-1, xmin+6, ymin-2, ymin+5])
+        ax.imshow(img2,zorder=10, extent=[xmax-15, xmax+5, ymax-11, ymax+9])
+        plt.imshow(img, zorder=0, extent=[xmin-1, xmin+6, ymin-2, ymin+5])
 
     plt.subplots_adjust(left = 0.03, right = 0.97, bottom = 0.05, top= 0.96)
     
@@ -1190,6 +1219,19 @@ def affichageavecpcc():
                 cpt+=1
     
 def traitementPiece(tab):
+    """
+
+    Est utilisée pour l'affichage d'Arnold sur la courbe. Un point sera ajouté à un tableau tous les 10 centimètres.
+
+    Ce dernier servira pour ancrer les sprites sur le plan.
+
+    :param tab: liste des points de la ligne calculée après les déformations
+    :type tab: list
+
+    :rtype: list
+
+    """
+
     res = []
     valtmp = []
     for cpt, val in enumerate(tab):
@@ -1203,6 +1245,9 @@ def traitementPiece(tab):
 
 def sauvegarde():
     """
+    Lance la sauvegarde du plan courant. 
+
+    Celle-ci sera effectuée par la fonction outils.lectureXML.sauvegardeXML().
     """
     
     fic = asksaveasfile(initialdir="../../data/plans/",mode='w',defaultextension=".xml")

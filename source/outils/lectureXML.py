@@ -5,6 +5,16 @@ import BeautifulSoup
 import io
 
 def lectureFichierXML(filename):
+    """
+    Lit un fichier XML décrivant une pièce.
+
+    Renvoie deux listes, une comprenant les noms des différentes pièces, l'autre un descriptif du bâtiment.
+
+    :param filename: nom du fichier à lire
+    :type filename: str
+
+    :rtype: list, list
+    """
 
     listeBatiments=[]
     listeNomBat=[]
@@ -61,6 +71,19 @@ def lectureFichierXML(filename):
     
 def lectureFichierXMLobjet(filename):
 
+    """
+    Lit un fichier XML décrivant un objet.
+
+    Renvoie le nom de l'objet et une liste décrivant l'ensemble des points composant l'objet.
+
+    :param filename: nom du fichier à lire
+    :type filename: str
+
+    :rtype: str, list
+
+    """
+
+
     segments = []
     soup = BeautifulSoup.BeautifulSoup(io.open(filename,encoding='utf8'))
     coordonnees = soup.findAll('coordonnees')
@@ -73,14 +96,32 @@ def lectureFichierXMLobjet(filename):
     return nom, segments
 
 def sauvegardeXML(filepath1,fic,dicobstacles,nomorigin,datorigin):
+
+    """
+    Sauvegarde un plan au format xml dans le dossier "data/plans"
+
+    :param filepath1: chemin vers le fichier à sauvegarder
+    :type filepath1: str
+
+    :param fic: fichier dans lequel on va écrire
+    :type fic: file
+
+    :param dicobstacles: dictionnaire comprenant les obstacles
+    :type dicobstales: dict
+
+    :param nomorigin: liste comprenant les noms des pièces
+    :type nomorigin: list
+
+    :param datorigin: liste comprenant les origines de chaque pièces
+    :type datorgin: list
+
+    """
     
     soup = BeautifulSoup.BeautifulSoup(io.open(filepath1,encoding='utf8'))
     
     fic.write('<?xml version="1.0" encoding="UTF-8"?>\n\n<racine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./bp.xsd" >\n<batiment>\n\n')
     
     fic.write(str(soup.find('nom')))
-    
-    print dicobstacles
     
     pieces = soup.findAll('piece')
     for val in pieces:

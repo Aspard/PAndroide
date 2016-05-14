@@ -1,0 +1,490 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Algorithmes &mdash; documentation PAndroide a2</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="documentation PAndroide a2" href="index.html"/>
+        <link rel="next" title="Interface" href="interface.html"/>
+        <link rel="prev" title="Documents du projet" href="code.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PAndroide
+          
+
+          
+            
+            <img src="_static/mainpetitalpha2.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="code.html">Documents du projet</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Algorithmes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-algo.deformAlgo">deformAlgo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-algo.deformAux">deformAux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-algo.dijkstra">dijkstra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-algo.appel">appel</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interface.html">Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="outils.html">Outils</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">PAndroide</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Algorithmes</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/algo.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-algo">
+<span id="algorithmes"></span><h1>Algorithmes<a class="headerlink" href="#module-algo" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Module pour la gestion des algorithmes.</p>
+<p>L&#8217;algorithme dijkstra utilisé a été implementé par David Eppstein de l&#8217;UC Irvine (<a class="reference external" href="https://www.ics.uci.edu/~eppstein/161/python/dijkstra.py">https://www.ics.uci.edu/~eppstein/161/python/dijkstra.py</a>).</p>
+<div class="section" id="module-algo.deformAlgo">
+<span id="deformalgo"></span><h2>deformAlgo<a class="headerlink" href="#module-algo.deformAlgo" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="function">
+<dt id="algo.deformAlgo.algo">
+<code class="descclassname">algo.deformAlgo.</code><code class="descname">algo</code><span class="sig-paren">(</span><em>forme</em>, <em>cible</em>, <em>line</em>, <em>nb_iterations</em>, <em>mu_coef</em>, <em>beta_coef</em><span class="sig-paren">)</span><a class="headerlink" href="#algo.deformAlgo.algo" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Applique l&#8217;algorithme de déformation et retourne la ligne obtenue</p>
+<p>Décommenter les lignes 68 à 75 pour afficher sur l&#8217;interface les cibles des agrandissements et réductions</p>
+<p>Utiliser coef = coefmax, ligne 59, au lieu de opt.fminbound(...), ligne 58, donnera un résultat plus rapidement, la courbe sera cependant moins lisse (les déformations se font de manière plus prononcées).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>forme</strong> (<em>numpy.array</em>) &#8211; Forme à envoyer sur la cible pour calculer la déformation</li>
+<li><strong>cible</strong> (<em>numpy.array</em>) &#8211; Forme cible</li>
+<li><strong>line</strong> (<em>numpy.array</em>) &#8211; Ligne à déformer</li>
+<li><strong>nb_iterations</strong> (<em>int</em>) &#8211; Nombre d&#8217;itérations</li>
+<li><strong>mu_coef</strong> (<em>float</em>) &#8211; mu dans l&#8217;algorithme, l&#8217;augmenter &#8220;aplatira&#8221; la gaussienne</li>
+<li><strong>beta_coef</strong> (<em>float</em>) &#8211; beta dans l&#8217;algorithme</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-algo.deformAux">
+<span id="deformaux"></span><h2>deformAux<a class="headerlink" href="#module-algo.deformAux" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="function">
+<dt id="algo.deformAux.func_iter">
+<code class="descclassname">algo.deformAux.</code><code class="descname">func_iter</code><span class="sig-paren">(</span><em>pt1</em>, <em>pt2</em>, <em>pts</em>, <em>division_coef</em>, <em>coef</em><span class="sig-paren">)</span><a class="headerlink" href="#algo.deformAux.func_iter" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>pt1</strong> (<em>[int,int]</em>) &#8211; </li>
+<li><strong>pt2</strong> (<em>[int,int]</em>) &#8211; </li>
+<li><strong>pts</strong> (<em>numpy.array</em>) &#8211; </li>
+<li><strong>division_coef</strong> (<em>float</em>) &#8211; </li>
+<li><strong>coef</strong> (<em>float</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="algo.deformAux.func_result">
+<code class="descclassname">algo.deformAux.</code><code class="descname">func_result</code><span class="sig-paren">(</span><em>centers</em>, <em>targets</em>, <em>coefs</em>, <em>division_coef</em>, <em>nb_iter</em>, <em>pt_in</em><span class="sig-paren">)</span><a class="headerlink" href="#algo.deformAux.func_result" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>centers</strong> (<em>numpy.array</em>) &#8211; </li>
+<li><strong>targets</strong> (<em>numpy.array</em>) &#8211; </li>
+<li><strong>coefs</strong> (<em>numpy.array</em>) &#8211; </li>
+<li><strong>division_coef</strong> &#8211; </li>
+<li><strong>nb_iter</strong> (<em>int</em>) &#8211; </li>
+<li><strong>pt_in</strong> (<em>[int,int]</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">[int,int]</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="algo.deformAux.func_result_reverse">
+<code class="descclassname">algo.deformAux.</code><code class="descname">func_result_reverse</code><span class="sig-paren">(</span><em>centers</em>, <em>targets</em>, <em>coefs</em>, <em>division_coef</em>, <em>nb_iter</em>, <em>pt_in</em><span class="sig-paren">)</span><a class="headerlink" href="#algo.deformAux.func_result_reverse" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>centers</strong> (<em>numpy.array</em>) &#8211; </li>
+<li><strong>targets</strong> (<em>numpy.array</em>) &#8211; </li>
+<li><strong>coefs</strong> (<em>numpy.array</em>) &#8211; </li>
+<li><strong>division_coef</strong> &#8211; </li>
+<li><strong>nb_iter</strong> (<em>int</em>) &#8211; </li>
+<li><strong>pt_in</strong> (<em>[int,int]</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">[int,int]</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="algo.deformAux.radial">
+<code class="descclassname">algo.deformAux.</code><code class="descname">radial</code><span class="sig-paren">(</span><em>center</em>, <em>pt</em>, <em>coef</em><span class="sig-paren">)</span><a class="headerlink" href="#algo.deformAux.radial" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>center</strong> (<em>[int,int]</em>) &#8211; </li>
+<li><strong>pt</strong> (<em>[int,int]</em>) &#8211; </li>
+<li><strong>coef</strong> (<em>float</em>) &#8211; </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-algo.dijkstra">
+<span id="dijkstra"></span><h2>dijkstra<a class="headerlink" href="#module-algo.dijkstra" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="function">
+<dt id="algo.dijkstra.Dijkstra">
+<code class="descclassname">algo.dijkstra.</code><code class="descname">Dijkstra</code><span class="sig-paren">(</span><em>G</em>, <em>start</em>, <em>end=None</em><span class="sig-paren">)</span><a class="headerlink" href="#algo.dijkstra.Dijkstra" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Find shortest paths from the  start vertex to all vertices nearer than or equal to the end.</p>
+<p>The input graph G is assumed to have the following representation:
+A vertex can be any object that can be used as an index into a dictionary.
+G is a dictionary, indexed by vertices.  For any vertex v, G[v] is itself a dictionary,
+indexed by the neighbors of v.  For any edge v-&gt;w, G[v][w] is the length of the edge.
+This is related to the representation in &lt;<a class="reference external" href="http://www.python.org/doc/essays/graphs.html">http://www.python.org/doc/essays/graphs.html</a>&gt;
+where Guido van Rossum suggests representing graphs as dictionaries mapping vertices
+to lists of outgoing edges, however dictionaries of edges have many advantages over lists:
+they can store extra information (here, the lengths), they support fast existence tests,
+and they allow easy modification of the graph structure by edge insertion and removal.
+Such modifications are not needed here but are important in many other graph algorithms.
+Since dictionaries obey iterator protocol, a graph represented as described here could
+be handed without modification to an algorithm expecting Guido&#8217;s graph representation.</p>
+<p>Of course, G and G[v] need not be actual Python dict objects, they can be any other
+type of object that obeys dict protocol, for instance one could use a wrapper in which vertices
+are URLs of web pages and a call to G[v] loads the web page and finds its outgoing links.</p>
+<p>The output is a pair (D,P) where D[v] is the distance from start to v and P[v] is the
+predecessor of v along the shortest path from s to v.</p>
+<p>Dijkstra&#8217;s algorithm is only guaranteed to work correctly when all edge lengths are positive.
+This code does not verify this property for all edges (only the edges examined until the end
+vertex is reached), but will correctly compute shortest paths even for some graphs with negative
+edges, and will raise an exception if it discovers that a negative edge has caused it to make a mistake.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="algo.dijkstra.shortestPath">
+<code class="descclassname">algo.dijkstra.</code><code class="descname">shortestPath</code><span class="sig-paren">(</span><em>G</em>, <em>start</em>, <em>end</em><span class="sig-paren">)</span><a class="headerlink" href="#algo.dijkstra.shortestPath" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Find a single shortest path from the given start vertex to the given end vertex.
+The input has the same conventions as Dijkstra().
+The output is a list of the vertices in order along the shortest path.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-algo.appel">
+<span id="appel"></span><h2>appel<a class="headerlink" href="#module-algo.appel" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="function">
+<dt id="algo.appel.appelAgr">
+<code class="descclassname">algo.appel.</code><code class="descname">appelAgr</code><span class="sig-paren">(</span><em>nomfichier</em>, <em>seuil</em>, <em>mode=0</em><span class="sig-paren">)</span><a class="headerlink" href="#algo.appel.appelAgr" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Lit un fichier de pièce, agrandit les obstacles, fusionne les obstacles agrandis, puis détermine le chemin à emprunter</p>
+<p>Il est possible de faire varier le nombre de points:</p>
+<ul class="simple">
+<li>Du chemin: ligne 257 du fichier( par défaut: ligne = tools.genLigne(entree,sortie,200))</li>
+</ul>
+<p>Retourne les points du chemin calculé à partir du fichier</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>nomfichier</strong> (<em>string</em>) &#8211; Nom du fichier de pièce à lire</li>
+<li><strong>seuil</strong> (<em>float</em>) &#8211; Distance servant à fusionner les obstacles s&#8217;ils ne la respectent pas</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="algo.appel.appelPieceBloque">
+<code class="descclassname">algo.appel.</code><code class="descname">appelPieceBloque</code><span class="sig-paren">(</span><em>nomfichier</em>, <em>seuil</em><span class="sig-paren">)</span><a class="headerlink" href="#algo.appel.appelPieceBloque" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Lit un fichier de piece, fusionne les obstacles et calcule le chemin à emprunter</p>
+<p>Il est possible de faire varier le nombre de points:</p>
+<ul class="simple">
+<li>De la pièce: ligne 129 du fichier( par défaut: piece = tools.redefineForme(piece,50) )</li>
+<li>Des obstacles: ligne 131 du fichier( par défaut: obss = [tools.redefineForme(obs,20) for obs in obstacles] )</li>
+<li>Du chemin: ligne 134 du fichier( par défaut: ligne = tools.genLigne(entree,sortie,400))</li>
+</ul>
+<p>Retourne les points du chemin calculé à partir du fichier</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>nomfichier</strong> (<em>string</em>) &#8211; Nom du fichier de pièce à lire</li>
+<li><strong>seuil</strong> (<em>float</em>) &#8211; Distance servant à fusionner les obstacles s&#8217;ils ne la respectent pas</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="algo.appel.calculerLigneAgr">
+<code class="descclassname">algo.appel.</code><code class="descname">calculerLigneAgr</code><span class="sig-paren">(</span><em>ligne</em>, <em>formes</em>, <em>pointsdefo</em>, <em>seuil</em><span class="sig-paren">)</span><a class="headerlink" href="#algo.appel.calculerLigneAgr" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Fonction utilisée pour calculer le chemin à emprunter grâce à des obstacles agrandis.</p>
+<p>Tant que la ligne passe par un obstacle agrandi, on définit une cible de déformation pour l&#8217;obstacle et on applique l&#8217;algoritheme de déformation</p>
+<p>Si l&#8217;on effectue trop de déformations pour une forme (limite à 5 par défaut), on arrête. Pour faire varier cette limite, modifier la ligne 208</p>
+<p>Il est possible de faire varier les paramètres de l&#8217;algorithme de déformation en modifiant les lignes 226 et 230 du fichier ( par défaut: newl = algo.algo(obs,newobs,l,50,0.6,0.5) )</p>
+<p>Retourne les points du chemin final</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>ligne</strong> (<em>numpy.array</em>) &#8211; Tableau des points de la ligne</li>
+<li><strong>formes</strong> (<em>list</em>) &#8211; Liste des formes, chaque forme étant un np.array() de points</li>
+<li><strong>pointsdefo</strong> (<em>list</em>) &#8211; Centres de déformation pour les obstacles faisant partie des murs de la pièce</li>
+<li><strong>seuil</strong> (<em>float</em>) &#8211; Distance utilisée pour ignorer certains points du début et de la fin du chemin, dans le cas où le départ ou l&#8217;arrivée sont inclus dans un obstacle</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">nump.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="algo.appel.calculerLigneBloque">
+<code class="descclassname">algo.appel.</code><code class="descname">calculerLigneBloque</code><span class="sig-paren">(</span><em>ligne</em>, <em>formes</em>, <em>pointsdefo</em><span class="sig-paren">)</span><a class="headerlink" href="#algo.appel.calculerLigneBloque" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Fonction utilisée pour calculer le chemin à emprunter.</p>
+<p>Tant que la ligne passe par un obstacle, on définit une cible de déformation pour l&#8217;obstacle et on applique l&#8217;algorithme de déformation</p>
+<p>Si l&#8217;on effectue trop de déformations pour une forme (limite à 10 par défaut), on arrête. Pour faire varier cette limite, modifier la ligne 57</p>
+<p>Il est possible de faire varier les paramètres de l&#8217;algorithme de déformation en modifiant les lignes 77 et 84 du fichier ( par défaut: newl = algo.algo(obs,newobs,l,50,0.6,0.5) )</p>
+<p>Retourne le tableau des points du chemin final</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>ligne</strong> (<em>numpy.array</em>) &#8211; Tableau des points de la ligne</li>
+<li><strong>formes</strong> (<em>list</em>) &#8211; Liste des formes, chaque forme étant un np.array() de points</li>
+<li><strong>pointsdefo</strong> (<em>list</em>) &#8211; Centres de déformation pour les obstacles faisant partie des murs de la pièce</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type retourné:</th><td class="field-body"><p class="first last">numpy.array</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="interface.html" class="btn btn-neutral float-right" title="Interface" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="code.html" class="btn btn-neutral" title="Documents du projet" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Gaspard Ducamp &amp; Yoann Taillé.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'a2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

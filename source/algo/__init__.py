@@ -3,7 +3,8 @@
 
 """ 
 Module pour la gestion des algorithmes.
-L'algorithme dijkstra utilisé a été implementé par David Eppstein de l'UC Irvine.
+
+L'algorithme dijkstra utilisé a été implementé par David Eppstein de l'UC Irvine (https://www.ics.uci.edu/~eppstein/161/python/dijkstra.py).
 
 """
 

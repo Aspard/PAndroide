@@ -6,5 +6,5 @@ Module de gestion de l'interface graphique.
 
 """
 
-def start(self):
-    return 0
+def start():
+    "This starts this module running ..."
