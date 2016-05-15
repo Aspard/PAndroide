@@ -1,5 +1,5 @@
 Documents du projet
-**************************
+
 
 Pré-requis pour l'utilisation
 =============================
@@ -11,6 +11,13 @@ Afin d'utiliser notre programme il sera nécessaire d'installer:
 * BeautifulSoup
 * pyglet (optionnel)
 * sphinx >= 1.3.5
+
+Code source
+===========
+
+Notre code est disponible sur ce github:
+https://github.com/Aspard/PAndroide
+
 
 Lancement du programme
 =========================
@@ -150,8 +157,40 @@ Diagramme
 
 .. image:: ../data/img/chartpetit.png
 
-Rapport
-=========================
+Nos approches
+=============
+
+Approche sans prise en compte du seuil
+--------------------------------------
+
+Dans cette version de l'algorithme, le seuil n'est utilisé que pour fusionner les objets. Il est donc possible que le chemin retourné longe de très près les obstacles. Notre algorithme (implémenté dans algo.appel. **appelPieceBloque**) est le suivant:
+
+-On identifie les obstacles et les murs de la pièce (outils.lectureFichier. **lecturePieceObs**), et on leur ajoute un certain nombre de points (outils.outils. **redefineForme**).
+
+-On fusionne les obstacles avec les murs ou les autres obstacles trop proches, de manière à respecter une distance égale au double du seuil (outils.outils. **fusion** pour les obstacles, outils.outils. **fusionMur** pour les murs). Si un obstacle est trop proche d'un mur, il est intégré aux murs de la pièce.
+
+-On dégage les fractions des murs à considérer comme des obstacles (outils.outils. **ramenerRect**). Pour cela, on inscrit la pièce dans un rectangle et on identifie les portions de la pièce qui s'en écartent, complétées des sections du rectangle qui n'ont pas été respectées. On retient au passage les points de début et de fin "d'écartement", qui seront plus tard utilisés comme centres de réduction. Si la partie de mur contient un angle du rectangle, on ajoute cet angle à la liste des centres.
+
+Ce qui suit est implémenté dans algo.appel. **calculerLigneBloque**:
+
+-On liste les obstacles et les morceaux de murs sur le chemin (outils.outils. **obsbloquants**).
+
+-Tant qu'il en existe, on les parcourt:
+
+* Si l'obstacle est une partie de mur, on le réduit autour du point le plus proche parmi la liste des centres de réduction calculés précédemment, jusqu'à ce que le chemin ne passe plus par la forme réduite (outils.outils. **defomin** et outils.outils. **deformerPourc**).
+* Sinon, on inscrit l'obstacle dans un rectangle, dont on détermine le point le plus éloigné du chemin. On prend comme centre de réduction le point de l'obstacle le plus proche du point précédent, et l'on réduit l'obstacle jusqu'à ce que le chemin ne passe plus par la forme réduite (outils.outils. **genCible**).
+* On applique l'algorithme de déformation sur la ligne en prenant comme cible de déformation de l'obstacle sa réduction (algo.deformAlgo. **algo**).
+* On liste de nouveau les obstacles et les sections de murs sur le chemin.
+* Si l'on a déformé un obstacle plus d'un nombre de fois établi, on sort de la boucle.
+
+-On retourne la ligne successivement déformée.
+
+La terminaison de l'algorithme est donc garantie soit par le fait que le chemin ait bien été calculé, soit par le fait que l'on ait dépassé le nombre de déformations autorisé.
+
+Algorithme avec seuil
+---------------------
+
+
 
 Manuel utilisateur
 =========================

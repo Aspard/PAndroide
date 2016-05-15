@@ -31,7 +31,7 @@
 
   
     <link rel="top" title="documentation PAndroide a2" href="#"/>
-        <link rel="next" title="Documents du projet" href="code.html"/> 
+        <link rel="next" title="Pré-requis pour l’utilisation" href="code.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -84,7 +84,14 @@
             
             
                 <ul>
-<li class="toctree-l1"><a class="reference internal" href="code.html">Documents du projet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Pré-requis pour l&#8217;utilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#code-source">Code source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#lancement-du-programme">Lancement du programme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#cahier-des-charges">Cahier des charges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#format-des-fichiers-xml">Format des fichiers XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#diagramme">Diagramme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#approches-retenues">Approches retenues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#manuel-utilisateur">Manuel utilisateur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="algo.html">Algorithmes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface.html">Interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="outils.html">Outils</a></li>
@@ -137,22 +144,24 @@
 <p>&#8220;La plupart des méthodes de planification de mouvements sont basées sur une exploration aléatoire de l&#8217;espace atteignable.
 Elles ne prennent en compte ni la géométrie de l&#8217;espace de travail, ni celle des obstacles, et pour cette raison il leur est difficile de trouver des solutions dans des passages étroits.
 L&#8217;objectif de ce projet est de créer des déformations de l&#8217;espace (en utilisant un algorithme récent qui permet d&#8217;en construire rapidement) qui réduisent significativement la taille des obstacles et permettent ainsi de résoudre facilement les problèmes de planification de chemin. Cette méthode a plusieurs avantages potentiels : par exemple, la déformation de l&#8217;espace sera réutilisable quelles que soient les configurations initiales et finales, et les chemins obtenus seront directement lisses, ce qui n&#8217;est pas le cas avec les méthodes classiques basées sur des arbres d&#8217;exploration.&#8221;</p>
-<p>Après s&#8217;être fait la main sur l&#8217;algorithme de déformation proposé le sujet a été contextualisé et il a été décidé que ce qui était à la base un projet plutôt exploratoire allait devenir un projet de planification de mouvements d&#8217;un robot dans un batiment encombré.</p>
+<p>Après s&#8217;être fait la main sur l&#8217;algorithme de déformation proposé le sujet a été contextualisé et il a été décidé que ce qui était à la base un projet plutôt exploratoire allait devenir un projet de planification de mouvements, en deux dimensions, d&#8217;un robot dans un batiment encombré d&#8217;obstacles. Plusieurs options ont été imaginées, décrites dans le rapport elles ont toutes leurs avantages et inconvénients, tant au niveau du temps de calcul qu&#8217;au niveau de la précision des résultats.</p>
 </div>
 <div class="section" id="table-des-matieres">
 <h1>Table des matières:<a class="headerlink" href="#table-des-matieres" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="code.html">Documents du projet</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="code.html#pre-requis">Pré-requis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code.html#lancement-du-programme">Lancement du programme</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code.html#cahier-des-charges">Cahier des charges</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code.html#format-des-fichiers-xml">Format des fichiers XML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code.html#diagramme">Diagramme</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code.html#rapport">Rapport</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code.html#manuel-utilisateur">Manuel utilisateur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html">Pré-requis pour l&#8217;utilisation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#code-source">Code source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#lancement-du-programme">Lancement du programme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#cahier-des-charges">Cahier des charges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#format-des-fichiers-xml">Format des fichiers XML</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#diagramme">Diagramme</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#approches-retenues">Approches retenues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="code.html#algorithme-sans-seuil">Algorithme sans seuil</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code.html#algorithme-avec-seuil">Algorithme avec seuil</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="code.html#manuel-utilisateur">Manuel utilisateur</a></li>
 <li class="toctree-l1"><a class="reference internal" href="algo.html">Algorithmes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="algo.html#module-algo.deformAlgo">deformAlgo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="algo.html#module-algo.deformAux">deformAux</a></li>
@@ -191,7 +200,7 @@ L&#8217;objectif de ce projet est de créer des déformations de l&#8217;espace 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="code.html" class="btn btn-neutral float-right" title="Documents du projet" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="code.html" class="btn btn-neutral float-right" title="Pré-requis pour l’utilisation" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>
