@@ -1,5 +1,5 @@
-Algorithmes
-**************************
+Fonctions principales
+**********************
 
 .. automodule :: algo
 

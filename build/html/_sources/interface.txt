@@ -1,5 +1,5 @@
-Interface
-**************************
+Gestion de l'interface
+**********************
 
 .. automodule :: interface
 

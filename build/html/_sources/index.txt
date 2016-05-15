@@ -20,8 +20,8 @@ Table des matières:
    
    code
    algo
-   interface
    outils
+   interface
    
 
 Indices and tables

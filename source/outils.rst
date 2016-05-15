@@ -1,4 +1,4 @@
-Outils
+Fonctions outils
 **************************
 
 .. automodule :: outils
