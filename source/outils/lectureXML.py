@@ -3,6 +3,7 @@
 
 import BeautifulSoup
 import io
+import os
 
 def lectureFichierXML(filename):
     """
@@ -83,7 +84,6 @@ def lectureFichierXMLobjet(filename):
 
     """
 
-
     segments = []
     soup = BeautifulSoup.BeautifulSoup(io.open(filename,encoding='utf8'))
     coordonnees = soup.findAll('coordonnees')
@@ -116,8 +116,10 @@ def sauvegardeXML(filepath1,fic,dicobstacles,nomorigin,datorigin):
     :type datorgin: list
 
     """
-    
-    soup = BeautifulSoup.BeautifulSoup(io.open(filepath1,encoding='utf8'))
+
+    fictmp = io.open(filepath1,encoding='utf8')
+
+    soup = BeautifulSoup.BeautifulSoup(fictmp)
     
     fic.write('<?xml version="1.0" encoding="UTF-8"?>\n\n<racine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./bp.xsd" >\n<batiment>\n\n')
     
@@ -154,3 +156,7 @@ def sauvegardeXML(filepath1,fic,dicobstacles,nomorigin,datorigin):
         
     fic.write('</batiment>\n</racine>')
     fic.close()
+
+    fictmp.close()
+    
+    os.remove(filepath1)

@@ -18,6 +18,7 @@ import os
 import math
 import time
 import matplotlib.image as mpimg
+import shutil
 
 try:
     import winsound as winsound
@@ -36,6 +37,7 @@ import outils.outils as outils
 import algo.dijkstra as dij
 import algo.appel as exp
 import conf
+import io
 
 fenetre = Tk.Tk()
 fenetre.wm_title("Interface")
@@ -149,7 +151,7 @@ def chargement():
     
     filepath = askopenfilename(initialdir="../../data/plans/",title="Ouvrir un fichier", filetypes=[('xml files', '.xml'), ('all files', '.*')])
     
-    if filepath != ():
+    if filepath != () and filepath != '':
     
         if dejaOuvert == 0:
         
@@ -438,6 +440,9 @@ def affichageavecobstacles():
         img2 = mpimg.imread('../../data/img/criterium.png')
         ax.imshow(img2,zorder=10, extent=[xmax-15, xmax+5, ymax-11, ymax+9])
         plt.imshow(img, zorder=0, extent=[xmin-1, xmin+6, ymin-2, ymin+5])
+    else:
+        img = mpimg.imread('../../data/img/brain.png')
+        plt.imshow(img, zorder=0, extent=[xmin, xmin+1, ymin, ymin+1])
 
     plt.subplots_adjust(left = 0.03, right = 0.97, bottom = 0.05, top= 0.96)
     
@@ -534,6 +539,9 @@ def modifaff():
         img2 = mpimg.imread('../../data/img/criterium.png')
         ax.imshow(img2,zorder=10, extent=[xmax-15, xmax+5, ymax-11, ymax+9])
         plt.imshow(img, zorder=0, extent=[xmin-1, xmin+6, ymin-2, ymin+5])
+    else:
+        img = mpimg.imread('../../data/img/brain.png')
+        plt.imshow(img, zorder=0, extent=[xmin, xmin+1, ymin, ymin+1])
 
     plt.subplots_adjust(left = 0.03, right = 0.97, bottom = 0.05, top= 0.96)
 
@@ -848,6 +856,9 @@ def affichageavecpcc():
         img2 = mpimg.imread('../../data/img/criterium.png')
         ax.imshow(img2,zorder=10, extent=[xmax-15, xmax+5, ymax-11, ymax+9])
         plt.imshow(img, zorder=0, extent=[xmin-1, xmin+6, ymin-2, ymin+5])
+    else:
+        img = mpimg.imread('../../data/img/brain.png')
+        plt.imshow(img, zorder=0, extent=[xmin, xmin+1, ymin, ymin+1])
 
     plt.subplots_adjust(left = 0.03, right = 0.97, bottom = 0.05, top= 0.96)
     
@@ -1217,7 +1228,12 @@ def affichageavecpcc():
                 time.sleep(.050)
                 t.remove()
                 cpt+=1
-    
+
+    tmpath = '../../data/tmp'
+
+    for file in os.listdir(tmpath):
+        os.remove(tmpath+'/'+file)
+
 def traitementPiece(tab):
     """
 
@@ -1249,7 +1265,14 @@ def sauvegarde():
 
     Celle-ci sera effectuée par la fonction outils.lectureXML.sauvegardeXML().
     """
+
+    tmp = filepath.split('/')
+    nomfic = '../../data/tmp/'+tmp[-1].split('.xml')[0]+'_tmp.xml'
+    shutil.copy2(filepath,nomfic)
     
     fic = asksaveasfile(initialdir="../../data/plans/",mode='w',defaultextension=".xml")
-    
-    lectureXML.sauvegardeXML(filepath,fic,dicobstacles,nomorigin,datorigin)
+
+    if fic == ():
+        return
+
+    lectureXML.sauvegardeXML(nomfic,fic,dicobstacles,nomorigin,datorigin)

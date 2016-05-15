@@ -1,16 +1,16 @@
 Documents du projet
 **************************
 
+Pré-requis pour l'utilisation
+=============================
 
-Pré-requis
-=========================
 Afin d'utiliser notre programme il sera nécessaire d'installer:
 
-* Un interpreteur python
+* Python >= 2.7
 * Tkinter
 * BeautifulSoup
 * pyglet (optionnel)
-* sphinx (de préférence une version récente, sans quoi il peut y avoir des défauts d'affichage)
+* sphinx >= 1.3.5
 
 Lancement du programme
 =========================

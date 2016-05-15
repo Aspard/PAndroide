@@ -1,7 +1,6 @@
 Documents du projet
 **************************
 
-
 Pré-requis
 =========================
 Afin d'utiliser notre programme il sera nécessaire d'installer:
