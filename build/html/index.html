@@ -88,6 +88,7 @@
 <li class="toctree-l1"><a class="reference internal" href="algo.html">Fonctions principales</a></li>
 <li class="toctree-l1"><a class="reference internal" href="outils.html">Fonctions outils</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interface.html">Gestion de l&#8217;interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exemple.html">Exemple d&#8217;utilisation</a></li>
 </ul>
 
             
@@ -139,6 +140,10 @@ Elles ne prennent en compte ni la géométrie de l&#8217;espace de travail, ni c
 L&#8217;objectif de ce projet est de créer des déformations de l&#8217;espace (en utilisant un algorithme récent qui permet d&#8217;en construire rapidement) qui réduisent significativement la taille des obstacles et permettent ainsi de résoudre facilement les problèmes de planification de chemin. Cette méthode a plusieurs avantages potentiels : par exemple, la déformation de l&#8217;espace sera réutilisable quelles que soient les configurations initiales et finales, et les chemins obtenus seront directement lisses, ce qui n&#8217;est pas le cas avec les méthodes classiques basées sur des arbres d&#8217;exploration.&#8221;</p>
 <p>Après s&#8217;être fait la main sur l&#8217;algorithme de déformation proposé le sujet a été contextualisé et il a été décidé que ce qui était à la base un projet plutôt exploratoire allait devenir un projet de planification de mouvements, en deux dimensions, d&#8217;un robot dans un batiment encombré d&#8217;obstacles. Plusieurs options ont été imaginées, décrites dans le rapport elles ont toutes leurs avantages et inconvénients, tant au niveau du temps de calcul qu&#8217;au niveau de la précision des résultats.</p>
 </div>
+<div class="section" id="l-article-fondateur">
+<h1>L&#8217;article fondateur<a class="headerlink" href="#l-article-fondateur" title="Lien permanent vers ce titre">¶</a></h1>
+<p>L&#8217;algorithme de déformation utilisé provient d&#8217;un article (Nicolas Perrin, ISIR) contenant un algorithme d&#8217;alignement difféomorphique issu de <a class="reference download internal" href="_downloads/diffeo_matching.pdf" download=""><code class="xref download docutils literal"><span class="pre">cet</span> <span class="pre">article</span></code></a> (en préparation).</p>
+</div>
 <div class="section" id="table-des-matieres">
 <h1>Table des matières:<a class="headerlink" href="#table-des-matieres" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="toctree-wrapper compound">
@@ -149,7 +154,7 @@ L&#8217;objectif de ce projet est de créer des déformations de l&#8217;espace 
 <li class="toctree-l2"><a class="reference internal" href="code.html#lancement-du-programme">Lancement du programme</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code.html#cahier-des-charges">Cahier des charges</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code.html#format-des-fichiers-xml">Format des fichiers XML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code.html#diagramme">Diagramme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code.html#diagramme-d-organisation-du-code">Diagramme d&#8217;organisation du code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code.html#nos-approches">Nos approches</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code.html#manuel-utilisateur">Manuel utilisateur</a></li>
 </ul>
@@ -170,18 +175,21 @@ L&#8217;objectif de ce projet est de créer des déformations de l&#8217;espace 
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="interface.html">Gestion de l&#8217;interface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="interface.html#module-interface.interface">inteface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interface.html#module-interface.interface">interface</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exemple.html">Exemple d&#8217;utilisation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="exemple.html#la-maison-de-bernard-l-ermite">La maison de Bernard, l&#8217;ermite</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Lien permanent vers ce titre">¶</a></h1>
+<div class="section" id="index">
+<h1>Index<a class="headerlink" href="#index" title="Lien permanent vers ce titre">¶</a></h1>
 <ul class="simple">
 <li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
 <li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Index du module</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Page de recherche</span></a></li>
 </ul>
 </div>
 

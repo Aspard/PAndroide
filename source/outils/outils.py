@@ -1200,6 +1200,21 @@ def agrandiradd(forme,seuil):
       formedef.append(ptscarres[ind])
   return np.array(formedef)
 
+def unit_vector(vector):
+    """
+    Returns the unit vector of the vector.
+    """
+
+    return vector / np.linalg.norm(vector)
+
+def angle_between(v1, v2):
+    """
+    Returns the angle in radians between vectors 'v1' and 'v2'
+    """
+
+    v1_u = unit_vector(v1)
+    v2_u = unit_vector(v2)
+    return np.arccos(np.clip(np.dot(v1_u, v2_u), -1.0, 1.0))
 
 def agrandirobs(forme,seuil):
     """
@@ -1213,19 +1228,30 @@ def agrandirobs(forme,seuil):
     :type seuil: float
     :rtype: numpy.array
     """
-    bary = np.mean(forme,axis=0)
+
+    bary = np.mean(forme[:-1],axis=0,dtype=np.float64)
     
+    alpha = angle_between(forme[0]-forme[1],np.array([1,0]))
+
+    alpha = -(180-180*(alpha/math.pi))
+
+    forme2 = rotforme(forme,alpha,bary)
+
     formedef = np.copy(forme)
+
     for i in range(len(forme)):
-        coefx = 1
-        coefy = 1
-        if abs(forme[i,0] - bary[0])>0:
-            coefx = (abs(forme[i,0] - bary[0])+seuil)/abs(forme[i,0] - bary[0])
-        if abs(forme[i,1] - bary[1])>0:
-            coefy = (abs(forme[i,1] - bary[1])+seuil)/abs(forme[i,1] - bary[1])
-        formedef[i,0] = bary[0] + ((forme[i,0] - bary[0]) * (coefx))
-        formedef[i,1] = bary[1] + ((forme[i,1] - bary[1]) * (coefy))
-    return formedef
+
+        if bary[0] > forme2[i][0]:
+            formedef[i,0] = forme2[i][0]-seuil
+        else:
+            formedef[i,0] = forme2[i][0]+seuil
+
+        if bary[1] > forme2[i][1]:
+            formedef[i,1] = forme2[i][1]-seuil
+        else:
+            formedef[i,1] = forme2[i][1]+seuil      
+    
+    return np.array(rotforme(formedef,-alpha,bary))
 
 def fusionAgr(obstacles):
     """

@@ -3,7 +3,7 @@ Gestion de l'interface
 
 .. automodule :: interface
 
-inteface
+interface
 =========================
 
 .. automodule :: interface.interface

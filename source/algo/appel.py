@@ -260,11 +260,21 @@ def appelAgr(nomfichier,seuil,mode=0):
 
     rect,formes,pointsdefo = tools.ramenerRectAgr(piece)
 
+    '''
     formes.extend(obstacles)
 
     formespetites = cp(formes)
 
     formes = [tools.agrandiradd(forme,seuil) for forme in formes]
+
+    formes = [tools.redefineseuil(forme,seuil) for forme in formes]
+
+    '''
+
+    formes = [tools.agrandiradd(forme,seuil) for forme in formes]
+    obstacles = [tools.agrandirobs(obs,seuil) for obs in obstacles]
+
+    formes.extend(obstacles)
 
     formes = [tools.redefineseuil(forme,seuil) for forme in formes]
 

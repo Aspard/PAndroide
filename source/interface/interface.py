@@ -399,7 +399,7 @@ def compute():
         for val in piecesaparcourir[1:len(piecesaparcourir)-1]:
             tmp = val.split('-')
             res.append(tmp)
-        print piecesaparcourir, res
+
     affichageavecpcc()
 
 def affichageavecobstacles():
@@ -677,8 +677,6 @@ def onclick(event):
     Gère les clics sur le plan de l'utilisateur en fonction des différents modes (suppression d'objets, chargement d'objets, remplissage des champs).
     """
     global valclick, x0,y0,xdest,ydest, entreey, entreex, entreeydest, entreexdest, valuex, valuey, valuexdest, valueydest, top, listbox, listbox2, b3, b5, canvas, datatmp, linetmp,dicobstacles, rot
-    
-    print event.button
     
     ## Si on est en mode suppression ##
     if event.button == 3:
@@ -1049,8 +1047,6 @@ def affichageavecpcc():
     courbes = []
     data = []
     
-    print entreeseuil.get()
-    
     try:
         seuil = float(entreeseuil.get())
         if seuil == 0.0:
@@ -1079,7 +1075,7 @@ def affichageavecpcc():
         fichier = open("../../data/res/"+fname+'_'+pname+'_'+str(seuil)+".txt", "w")
     
     for fic in listpieces:
-        print fic
+
         if avecSeuil == 1:
             courbes = exp.appelAgr(fic,seuil,t)
             tab.append(courbes)

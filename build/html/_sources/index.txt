@@ -12,21 +12,27 @@ L'objectif de ce projet est de créer des déformations de l'espace (en utilisan
 
 Après s'être fait la main sur l'algorithme de déformation proposé le sujet a été contextualisé et il a été décidé que ce qui était à la base un projet plutôt exploratoire allait devenir un projet de planification de mouvements, en deux dimensions, d'un robot dans un batiment encombré d'obstacles. Plusieurs options ont été imaginées, décrites dans le rapport elles ont toutes leurs avantages et inconvénients, tant au niveau du temps de calcul qu'au niveau de la précision des résultats.
 
+
+L'article fondateur
+===================
+
+L'algorithme de déformation utilisé provient d'un article (Nicolas Perrin, ISIR) contenant un algorithme d'alignement difféomorphique issu de :download:`cet article <../data/doc/diffeo_matching.pdf>` (en préparation).
+
 Table des matières:
 ===================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    
    code
    algo
    outils
    interface
+   exemple
    
 
-Indices and tables
+Index
 ==================
 
 * :ref:`genindex`
 * :ref:`modindex`
-* :ref:`search`

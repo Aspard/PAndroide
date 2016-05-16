@@ -53,8 +53,8 @@ def algo(forme,cible,line,nb_iterations,mu_coef,beta_coef):
 	    f = lambda x: np.linalg.norm(aux.func_iter(forme[idmax,:], cible[idmax,:], forme, (1.0/beta_coef), x) - cible)
 	    coefmax = mu_coef * 1.0/(np.sqrt(2) * np.exp(-0.5) * np.linalg.norm(cible[idmax,:] - forme[idmax,:]))
 	    # calcul de rhoj
-	    #coef = opt.fminbound(func = f, x1 = 0.0, x2 = min(coefmax, 50), disp = 0)
-	    coef = coefmax
+	    coef = opt.fminbound(func = f, x1 = 0.0, x2 = min(coefmax, 50), disp = 0)
+	    #coef = coefmax
 	    centers[j,:] = forme[idmax,:]
 	    targets[j,:] = cible[idmax,:]
 	    coefs[j] = coef
@@ -63,14 +63,14 @@ def algo(forme,cible,line,nb_iterations,mu_coef,beta_coef):
     fun = lambda pt: aux.func_result(centers, targets, coefs, (1.0/beta_coef), nb_iterations, pt);
     fun_reverse = lambda pt: aux.func_result_reverse(centers, targets, coefs, (1.0/beta_coef), nb_iterations, pt);
 		
-    '''
+    
     obs = np.array([fun(pt) for pt in frm])
 
     newobs = np.array([fun_reverse(pt) for pt in cible])
 
     plt.plot(obs[:,0],obs[:,1],'brown')
     plt.plot(newobs[:,0],newobs[:,1],'orange')
-    '''
+    
 
     PT1 = fun_reverse(line[0][:])
     PT2 = fun_reverse(line[-1][:])

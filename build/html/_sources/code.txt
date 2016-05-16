@@ -152,8 +152,10 @@ data/objets/obj.xsd
 
     </xsd:schema>
 
-Diagramme
-=========================
+Diagramme d'organisation du code
+================================
+
+Ci-dessous on peut voir comment intéragissent et où sont utilisés les différents modules, fichiers et classes de notre projet.
 
 .. image:: ../data/img/chartpetit.png
 
