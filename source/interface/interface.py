@@ -43,7 +43,7 @@ fenetre = Tk.Tk()
 fenetre.wm_title("Interface")
 fenetre.configure(bg='#d9d9d9')
 fenetre.minsize(width=400,height=500)
-
+filepath = ''
 txt = []
 valaff = 0
 valobs = 0
@@ -101,11 +101,11 @@ def chargementobjet():
 
     global dicoobjets, valclick, top, nom, seg, listboxobj, rot
     
-    filepath = askopenfilename(initialdir="../../data/objets/",title="Ouvrir un objet", filetypes=[('xml files','.xml'),('all files','.*')])
+    filepath2 = askopenfilename(initialdir="../../data/objets/",title="Ouvrir un objet", filetypes=[('xml files','.xml'),('all files','.*')])
     
-    if filepath != ():
+    if filepath2 != ():
         
-        nom, seg = lectureXML.lectureFichierXMLobjet(filepath)
+        nom, seg = lectureXML.lectureFichierXMLobjet(filepath2)
     
         top = Toplevel()
         top.title(nom.split(' ')[0])
@@ -149,11 +149,13 @@ def chargement():
 
     global filepath, listeNomBat, listebatiments, b1, b2, b3, b4, b5, b6, fenetre, menubar, l, l2, b0, entreex, entreey, entreepiece, entreexdest, entreeydest, entreepiecedest, valuex, valuey, valuexdest, valueydest, valuepiece, valuepiecedest, dejaOuvert, valaff, valobs,pieceaparcourir,dicobstacles,listobjets,pf,tabverif, valueseuil, entreeseuil
     
-    filepath = askopenfilename(initialdir="../../data/plans/",title="Ouvrir un fichier", filetypes=[('xml files', '.xml'), ('all files', '.*')])
+    filepath2 = askopenfilename(initialdir="../../data/plans/",title="Ouvrir un fichier", filetypes=[('xml files', '.xml'), ('all files', '.*')])
     
-    if filepath != () and filepath != '':
+    if filepath2 != () and filepath2 != '':
     
         if dejaOuvert == 0:
+        
+            filepath = filepath2
         
             fenetre.destroy()
             
@@ -240,10 +242,9 @@ def chargement():
             fenetre.mainloop()
             
         else:
-        
-            if filepath == () or filepath == '':
-                return
-        
+                
+            filepath = filepath2
+            
             for child in fenetre.winfo_children():
                 child.destroy()
             l = LabelFrame(fenetre, text="Plan",pady=0)
@@ -1268,7 +1269,7 @@ def sauvegarde():
     
     fic = asksaveasfile(initialdir="../../data/plans/",mode='w',defaultextension=".xml")
 
-    if fic == ():
+    if fic == () or fic == '':
         return
 
     lectureXML.sauvegardeXML(nomfic,fic,dicobstacles,nomorigin,datorigin)

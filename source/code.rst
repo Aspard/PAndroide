@@ -159,11 +159,6 @@ Ci-dessous on peut voir comment intéragissent et où sont utilisés les différ
 
 .. image:: ../data/img/chartpetit.png
 
-Nos approches
-=============
-
-Un pdf décrivant les différentes approches mises en place et imaginées est disponible :download:`ici <../data/doc/rapport.pdf>`
-
 Manuel utilisateur
 =========================
 
