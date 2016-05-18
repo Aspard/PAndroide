@@ -14,7 +14,7 @@ Afin de trouver notre chemin dans un bâtiment nous commenceront par lire, dans 
 L'article fondateur
 ===================
 
-L'algorithme de déformation utilisé provient d'un article (Nicolas Perrin, ISIR) contenant un algorithme d'alignement difféomorphique issu de :download:`cet article <../data/doc/diffeo_matching.pdf>` (en préparation).
+L'algorithme de déformation utilisé provient des sections 2 et 3 d'un article de Nicolas Perrin et Philipp Schlehuber-Caissier (ISIR) contenant un algorithme d'alignement difféomorphique disponible :download:`ici <../data/doc/diffeo_learning_stable_sys.pdf>` (en préparation).
 
 Nos approches
 =============
@@ -25,8 +25,13 @@ Table des matières:
 ===================
 
 .. toctree::
+   :hidden:
+
+   self
+
+.. toctree::
    :maxdepth: 3
-   
+
    code
    algo
    outils
